@@ -1,0 +1,92 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{% static '/css/57134.png' %}"<!--"../../../favicon.ico">
+    <title>Support</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="{% static '/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static '/css/ticket.css' %}">
+    <link rel="stylesheet" href="{% static '/css/contact.css' %}">
+
+</head>
+
+<body>
+    <header>
+      <ul class="nav nav-tabs">
+            <li class="send_ticket{% if url_name == 'home' %}active{% endif %}">
+                <a href="{% url 'ticket:home' %}">Отправить заявку</a>
+            </li>
+            <li class="photo{% if url_name == 'tothegallery' %}active{% endif %}">
+                <a href="{% url 'polls:tothegallery' %}"> </a>
+            </li>
+            {% if username == 'mjee' %}
+                <li class="{% if url_name == 'watch_all' %}active{% endif %}">
+                    <a href="{% url 'ticket:watch_all' %}">Смотреть все</a>
+                </li>
+                <li class="{% if url_name == 'history' %}active{% endif %}">
+                    <a href="{% url 'ticket:history' %}">Архив</a>
+                </li>
+                <li class="{% if url_name == 'cart_home' %}active{% endif %}">
+                    <a href="{% url 'cart:cart_home' %}">Картриджи</a>
+                </li>
+                <li class="nav nav-tabs; pull-right">
+                    <a href="{% url 'loginsys:logout' %}">logout {{ username }}</a>
+                </li>
+            {% endif %}
+            {% if username %}
+            <li class="nav nav-tabs; pull-right">
+                <a href="{% url 'loginsys:logout' %}">logout {{ username }}</a>
+            </li>
+            {% elif not username %}
+                <li class="nav nav-tabs; pull-right">
+                    <a href="{% url 'loginsys:login' %}">login</a>
+                </li>
+            {% endif %}
+        </ul>  
+    </header>
+
+{#<div>#}
+{#    {% if username %}#}
+{#        <p>Logged</p>#}
+{#    {% else %}#}
+{#        <p>Nonlogged</p>#}
+{#    {% endif %}#}
+{#</div>#}
+
+{% block watch_all %}{% endblock %}
+{% block cart_event_form %} {% endblock %}
+{% block form %}{% endblock %}
+{% block watch_one %}{% endblock %}
+{% block login %}{% endblock %}
+{% block thanks %}{% endblock %}
+{% block test %}{% endblock %}
+{% block watch_one_num %}{% endblock %}
+{% block watch_status %}{% endblock %}
+{% block watch_place %}{% endblock %}
+{% block watch_model %}{% endblock %}
+{% block group_ops %}{% endblock %}
+{% block register %}{% endblock %}
+{% block uploadPic %}{% endblock %}
+
+<footer class="navbar-fixed-bottom text-center">
+{#    <p class="inline-group">Copyright Zarechniy 2017</p>#}
+</footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    {% block javascript %}{% endblock %}
+  </body>
+</html>

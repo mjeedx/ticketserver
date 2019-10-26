@@ -1,0 +1,23 @@
+{%  load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Галлерея ANSERGLOB</title>
+    <link rel="stylesheet" href="{% static '/css/bootstrap.css' %}">
+    <link rel="stylesheet" type="text/css" media="all" href="{% static 'css/font-awesome.min.css' %}" />
+    <link rel="stylesheet" type="text/css" media="all" href="{% static 'css/jgallery.min.css' %}" />
+    <script type="text/javascript" src="{% static 'js/jquery-2.0.3.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jgallery.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/touchswipe.min.js' %}"></script>
+</head>
+
+<body style="width: 900px; margin: 100px auto; height: auto;">
+
+{% block albums %}{% endblock %}
+{% block uploadPic %}{% endblock %}
+{% block votePage %}{% endblock %}
+
+
+</body>
+</html>

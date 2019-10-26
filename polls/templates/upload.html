@@ -1,0 +1,45 @@
+{% extends 'main.html' %}
+{% load staticfiles %}
+
+{% block uploadPic %}
+
+{#        <div class="input-group">#}
+{#          <span class="input-group-addon" id="basic-addon1">Название фото</span>#}
+{#          <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">#}
+{#        </div>#}
+    <div class="table" style="margin-top: 10%; margin-left: 20%; width: 600px">
+        {% if photoLast > 0 %}
+            <form action="{% url 'polls:uploadPic' %}" enctype="multipart/form-data" method="post">
+                {% csrf_token %}
+                {{ form.non_field_errors }}
+
+                <div class="row">
+                    <label class="col col-md-2">Название фото: </label>
+                    <span class="col col-md-2">{{ form.title }}</span>
+                </div>
+                <div class="row" style="margin-top: 20px">
+                    <label class="col col-md-2">Выберите категорию: </label>
+                    <div class="col col-md-2">{{ form.categoryId }}</div>
+                </div>
+                <div class="row">
+                    <label class="col col-md-2">Выберите файл: </label>
+                    {{ form.errors }}
+                    <div class="col col-md-2">{{ form.photo }}</div>
+                </div>
+                {% if photoLast <= 0 %}
+                    <input style="margin-top: 35px; margin-left: 15%;" class="btn btn-danger" type="submit" value="Отправить (осталось {{ photoLast }})">
+                {% else %}
+                    <input style="margin-top: 35px; margin-left: 15%;" class="btn btn-success" type="submit" value="Отправить (осталось {{ photoLast }})">
+                {% endif %}
+            </form>
+        {% else %}
+            <div>Вы загрузили максимально допустимое количество фотографий</div>
+            <a href="{% url 'polls:homepage' %}" class="btn btn-success" style="margin-left: 25%">На гравную</a>
+        {% endif %}
+    </div>
+
+
+
+{% endblock %}
+
+

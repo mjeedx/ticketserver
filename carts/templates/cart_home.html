@@ -1,0 +1,70 @@
+{% extends 'main.html' %}
+
+
+
+
+
+{% block cart_event_form %}
+<a href="{% url 'cart:group_ops' %}">Групповые операции</a>
+<div class="container">
+    <div class="form-group" align="center">
+        <form action="{% url 'cart:event_add' %}" method="post">
+            {% csrf_token %}
+            {{ form.non_field_errors }}
+            <div class="input-lg" >
+                <label for="cart_number">Номер: </label>
+                {{ form.num.errors }}
+                {{ form.num }}
+            </div>
+            <div class="input-lg">
+                <label for="status">Статус</label>
+                {{ form.status.errors }}
+                {{ form.status }}
+            </div>
+            <div class="input-lg">
+                <label for="place">Место</label>
+                {{ form.place.errors }}
+                {{ form.place }}
+            </div>
+            <input class="btn btn-success" type="submit" value="Submit" />
+        </form>
+    </div>
+</div>
+<div class="container-fluid">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID евента</th>
+                <th>Дата</th>
+                <th>Номер</th>
+                <th>Статус</th>
+                <th>Extra</th>
+                <th>Модель</th>
+                <th>Место</th>
+            </tr>
+        </thead>
+        {% for cart in Cartridge %}
+            <tbody>
+                <tr>
+                    <td>{{ cart.id }}</td>
+                    <td>{{ cart.last_datetime }}</td>
+                    <td><a href="{% url 'cart:watch_one_num' num_id=cart.num_id %}">{{ cart.num }}</a></td>
+
+                    <td><a href="{% url 'cart:watch_status' status_id=cart.status_id %}">{{ cart.status }}</a></td>
+                    {% if cart.status_id == 1 %}
+                        <td><a class="btn-warning" href="{% url 'cart:send_refill' num_id=cart.num_id %}">На заправку!</a></td>
+                    {% elif cart.status_id == 3%}
+                        <td><a class="btn-success" href="{% url 'cart:homecoming' num_id=cart.num_id %}">На склад!</a></td>
+                    {% else%}
+                        <td style="color: white">blank</td>
+                    {% endif %}
+                    <td><a href="{% url 'cart:watch_model' model_id=cart.num.modell_id %}">{{ cart.num.modell }}</a></td>
+                    <td><a href="{% url 'cart:watch_place' place_id=cart.place_id %}">{{ cart.place }}</a></td>
+                </tr>
+            </tbody>
+        {% endfor %}
+    </table>
+</div>
+
+
+{% endblock %}

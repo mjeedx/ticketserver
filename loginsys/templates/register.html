@@ -1,0 +1,13 @@
+{% extends 'main.html' %}
+
+{% block register %}
+    <div class="container" style="width: 30%">
+
+      <form action="{% url 'loginsys:register'  %}" method="post" >
+          {% csrf_token %}
+          {{ form }}
+
+        <input class="btn btn-lg btn-primary center" type="submit">"Зарегистрироваться">
+      </form>
+    </div>
+{% endblock %}

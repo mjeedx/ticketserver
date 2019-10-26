@@ -1,0 +1,102 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Support</title>
+    <link rel="stylesheet" href="{% static '/css/contact.css' %}">
+
+<body>
+<table class="contacts">		
+	<tr class="table_head">
+		<td>Имя</td>
+		<td>Фамилия</td>
+		<td>Должность</td>
+		<td>Телефон</td>
+		<td>Почта</td>
+	</tr>	
+
+
+    {% for contact in contacts %}
+
+      <tr class="table_body">
+          <td>{{ contact.name }}</td>
+          <td>{{ contact.family_name }}</td>
+          <td>{{ contact.department_id }}</td>
+          <td>{{ contact.tel_id }}</td>
+          <td><a href="mailto:{{ contact.mail_id }}">{{ contact.mail_id }}</a> </td>
+      </tr>
+      
+    {% endfor %}
+</table>
+		
+
+
+
+<!--	<table>
+		<tr>
+		    <td><label>Имя</label></td>
+		    <td><input type="text" id="name" placeholder="Например, Василий" required></td>
+		</tr>
+		<tr>
+			<td><label>Фамилия</label></td>
+			<td><input type="text" id="family_name" placeholder="Например, Пупкин" required></td>
+		</tr>
+		<tr>
+		    <td><label>Отчество</label></td>
+			<td><input type="text" id="fathers_name" placeholder="Например, Петрович " required></td>
+		</tr>
+		<tr>
+		    <td><label>Компания</label></td>
+		<td>
+			<select id="company_id">
+				<option>Выберите компанию</option>
+				<option>Аскона</option>
+				<option>ХемаБуд</option>
+				<option>МедикГрупп</option>
+			</select>
+		</td>
+				
+			
+			
+
+
+
+	</table> -->
+		
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,30 @@
+{% extends 'main.html' %}
+
+{% block watch_status %}
+<div class="container-fluid">
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="col-md-3">Дата</th>
+                <th class="col-md-2">Номер</th>
+                <th class="col-md-3">Место</th>
+                <th class="col-md-3">Статус</th>
+{#                <th class="col-md-1">Extra</th>#}
+            </tr>
+        </thead>
+    {% for stat in status %}
+        <tbody>
+            <tr>
+                <td class="col-md-3">{{ stat.last_datetime }}</td>
+                <td class="col-md-2">{{ stat.num }}</td>
+                <td class="col-md-3">{{ stat.place }}</td>
+                <td class="col-md-3">{{ stat.status }}</td>
+{#                <td class="col-md-1">#}
+{#                    <a href="{% url 'cart:homecoming' num_id=event.num_id %}">Приехать</a>#}
+{#                </td>#}
+            </tr>
+        </tbody>
+    {% endfor %}
+    </table>
+</div>
+{% endblock %}

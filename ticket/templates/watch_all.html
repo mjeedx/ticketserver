@@ -1,0 +1,44 @@
+{% extends 'main.html' %}
+
+{% block watch_all %}
+
+<div class="center-block" style="padding-left: 30%">
+    <h1>Активные заявки</h1>
+</div>
+<div class="container-fluid">
+  <table class="table">
+    <thead>
+      <tr>
+        <th class="col-md-1">Номер</th>
+        <th class="col-md-1">ID заявки</th>
+        <th class="col-md-1">Отправитель</th>
+        <th class="col-md-1">Место</th>
+        <th class="col-md-2">Дата поступления</th>
+        <th class="col-md-5">Subject</th>
+        <th class="col-md-1">Статус</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for ticket in tickets %}
+      {% if ticket.finished is True %}
+      <tr class="success">
+      {% else %}
+      <tr class="danger">
+      {% endif %}
+        <td class="col-md-1">{{ forloop.counter }}</td>
+        <td class="col-md-1">{{ ticket.id }}</td>
+        <td class="col-md-1">{{ ticket.who }}</td>
+        <td class="col-md-1">{{ ticket.where }}</td>
+        <td class="col-md-2">{{ ticket.when }}</td>
+        <td class="col-md-5"><a href="{% url 'ticket:watch_one' ticket_id=ticket.id %}">{{ ticket.subject }}</a></td>
+        {% if ticket.finished is True %}
+            <td class="col-md-1">Готово</td>
+        {% else %}
+            <td class="col-md-1">В работе!</td>
+        {% endif %}
+       </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

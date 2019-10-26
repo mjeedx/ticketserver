@@ -1,0 +1,41 @@
+{% extends 'main.html' %}
+
+{% block watch_one %}
+
+<!--Container-->
+<div class="container" style="padding-top: 20px">
+    <div class="row">
+        <div align="center">
+            <a href="{% url 'ticket:watch_all' %}" class="btn btn-primary">Назад</a>
+        </div>
+        <div class="row1" style="padding-top: 20px">
+            <div class="col-md-3">
+                <p class="bg-info" align="center">{{ ticket.when }}</p>
+            </div>
+            <div class="col-md-2">
+                <p class="bg-info" align="center">{{ ticket.where }}</p>
+            </div>
+            <div class="col-md-3">
+                <p class="bg-info" align="center">{{ ticket.who }}</p>
+            </div>
+            <div class="col-md-2">
+                <p class="bg-info" align="center">{{ ticket.finished }}</p>
+            </div>
+            <div class="col-md-2">
+                <p class="bg-info" align="center">{{ ticket.ip }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="table-bordered">
+        <p align="center" style="padding-top: 20px; padding-bottom: 20px"><strong>{{ ticket.subject }}</strong></p>
+    </div>
+</div>
+
+<div align="center">
+    <a href="{% url 'ticket:confirm' ticket_id=ticket.id %}" type="button" class="btn btn-success">Готово!</a>
+
+    <a href="{% url 'ticket:delete_row' ticket_id=ticket.id %}" type="button" class="btn btn-danger">Удалить заявку.</a>
+</div>
+
+
+{% endblock %}

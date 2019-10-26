@@ -1,0 +1,43 @@
+{% extends 'main.html' %}
+
+
+{% block javascript %}
+  <script>
+    $(".id_username").change(function () {
+      console.log( $(this).val() );
+    });
+  </script>
+{% endblock %}
+
+
+
+{% block form %}
+
+    
+    <div class="home_page">
+        <form action="{% url 'ticket:ticket_add' %}" method="post">
+            {% csrf_token %}
+            {{ form.non_field_errors }}
+            <div class="input-lg">
+               <input type="text" name="who" id="id_who" placeholder="Ваше имя" required> 
+                {{ form.who.errors }}
+                <!--  {{ form.who }}  --> 
+            </div>
+            <div class="input-lg">
+                <input type="text" name="where" id="id_where" placeholder="Ваш отдел" required> 
+                {{ form.where.errors }}
+                <!--  {{ form.where }}  -->
+            </div>
+            <div class="problem">
+                <textarea id="subject" name="subject" placeholder="Опишите вашу проблему" cols="40" rows="7" required></textarea>
+                {{ form.subject.errors }}
+                <!--  {{ form.subject }}  -->
+            </div>
+            <div class="btn-send">
+                <input class="btn btn-success" type="submit" value="Отправить заявку" />
+            </div>
+        </form>
+    </div>
+  
+
+{% endblock %}

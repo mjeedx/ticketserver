@@ -1,0 +1,26 @@
+{% extends 'main.html' %}
+
+{% block watch_place %}
+<div class="container-fluid">
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="col-md-3">Дата</th>
+                <th class="col-md-3">Номер</th>
+                <th class="col-md-3">Место</th>
+                <th class="col-md-3">Статус</th>
+            </tr>
+        </thead>
+    {% for cart in carts %}
+        <tbody>
+            <tr>
+                <td class="col-md-3">{{ cart.last_datetime }}</td>
+                <td class="col-md-3">{{ cart.num }}</td>
+                <td class="col-md-3">{{ cart.place }}</td>
+                <td class="col-md-3">{{ cart.status }}</td>
+            </tr>
+        </tbody>
+    {% endfor %}
+    </table>
+</div>
+{% endblock %}
