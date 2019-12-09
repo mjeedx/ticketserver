@@ -1,138 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bd8153f4-88c9-4fe0-aff8-fa5bd7c7e80d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contacts/migrations/0008_contacts_is_shief.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contacts/templatetags/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contacts/templatetags/filters.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/static/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/contact.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1439e6cc-20e9-4a08-a48c-095b400336a5/storage.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/198d702d-9d20-4533-90a0-781fe90d1b0e/storage.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5727eaff-d5d2-4173-9177-4ea9744c9858/_metadata_/metadata" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5727eaff-d5d2-4173-9177-4ea9744c9858/_metadata_/metadata.keystream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5727eaff-d5d2-4173-9177-4ea9744c9858/_metadata_/metadata.keystream.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5727eaff-d5d2-4173-9177-4ea9744c9858/_metadata_/metadata.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5727eaff-d5d2-4173-9177-4ea9744c9858/_metadata_/metadata.values.at" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5727eaff-d5d2-4173-9177-4ea9744c9858/_metadata_/metadata_i" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5727eaff-d5d2-4173-9177-4ea9744c9858/_metadata_/metadata_i.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/863c2679-41e4-4828-b28c-80973a4a57b3/_metadata_/metadata" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/863c2679-41e4-4828-b28c-80973a4a57b3/_metadata_/metadata.keystream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/863c2679-41e4-4828-b28c-80973a4a57b3/_metadata_/metadata.keystream.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/863c2679-41e4-4828-b28c-80973a4a57b3/_metadata_/metadata.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/863c2679-41e4-4828-b28c-80973a4a57b3/_metadata_/metadata.values.at" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/863c2679-41e4-4828-b28c-80973a4a57b3/_metadata_/metadata_i" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/863c2679-41e4-4828-b28c-80973a4a57b3/_metadata_/metadata_i.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8a3dce06-fb04-4695-99b9-5a2542d30ff5/storage.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8b7399e0-dd46-4ae4-b8aa-4b25b1901602/storage.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9fb0696f-af95-47ea-9970-6194db707b4b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9fb0696f-af95-47ea-9970-6194db707b4b.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/aa2e4530-709d-45e7-ae9b-1a67b3ea874d/storage.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cd8ad809-f3bf-4e5d-8d6c-a07f9bf491a5/_metadata_/metadata" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cd8ad809-f3bf-4e5d-8d6c-a07f9bf491a5/_metadata_/metadata.keystream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cd8ad809-f3bf-4e5d-8d6c-a07f9bf491a5/_metadata_/metadata.keystream.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cd8ad809-f3bf-4e5d-8d6c-a07f9bf491a5/_metadata_/metadata.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cd8ad809-f3bf-4e5d-8d6c-a07f9bf491a5/_metadata_/metadata_i" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cd8ad809-f3bf-4e5d-8d6c-a07f9bf491a5/_metadata_/metadata_i.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cd8ad809-f3bf-4e5d-8d6c-a07f9bf491a5/storage.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d8e82503-5b6b-43c5-b960-1da9c41a45fa/_metadata_/metadata" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d8e82503-5b6b-43c5-b960-1da9c41a45fa/_metadata_/metadata.keystream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d8e82503-5b6b-43c5-b960-1da9c41a45fa/_metadata_/metadata.keystream.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d8e82503-5b6b-43c5-b960-1da9c41a45fa/_metadata_/metadata.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d8e82503-5b6b-43c5-b960-1da9c41a45fa/_metadata_/metadata.values.at" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d8e82503-5b6b-43c5-b960-1da9c41a45fa/_metadata_/metadata_i" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d8e82503-5b6b-43c5-b960-1da9c41a45fa/_metadata_/metadata_i.len" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/tickets.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/tickets.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carts/templates/cart_home.html" beforeDir="false" afterPath="$PROJECT_DIR$/carts/templates/cart_home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carts/templates/group_ops.html" beforeDir="false" afterPath="$PROJECT_DIR$/carts/templates/group_ops.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carts/templates/watch_cart_status.html" beforeDir="false" afterPath="$PROJECT_DIR$/carts/templates/watch_cart_status.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carts/templates/watch_model.html" beforeDir="false" afterPath="$PROJECT_DIR$/carts/templates/watch_model.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carts/templates/watch_one_num.html" beforeDir="false" afterPath="$PROJECT_DIR$/carts/templates/watch_one_num.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carts/templates/watch_place.html" beforeDir="false" afterPath="$PROJECT_DIR$/carts/templates/watch_place.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carts/templates/watch_status.html" beforeDir="false" afterPath="$PROJECT_DIR$/carts/templates/watch_status.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contacts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/contacts/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contacts/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contacts/templates/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contacts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/contacts/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loginsys/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/loginsys/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loginsys/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/loginsys/templates/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/css/base.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/css/changelists.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/css/changelists.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/css/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/css/dashboard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/css/fonts.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/css/fonts.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/css/forms.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/css/forms.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/css/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/css/rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/css/rtl.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/css/widgets.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/css/widgets.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/fonts/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/fonts/README.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/img/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/img/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/img/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/img/README.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/img/calendar-icons.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/img/calendar-icons.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/img/icon-addlink.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/img/icon-addlink.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/img/icon-alert.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/img/icon-alert.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/img/icon-calendar.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/img/icon-calendar.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/img/icon-changelink.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/img/icon-changelink.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/img/icon-clock.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/img/icon-clock.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/img/icon-deletelink.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/img/icon-deletelink.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/img/icon-no.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/img/icon-no.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/img/icon-unknown-alt.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/img/icon-unknown-alt.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/img/icon-unknown.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/img/icon-unknown.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/img/icon-yes.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/img/icon-yes.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/img/inline-delete.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/img/inline-delete.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/img/search.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/img/search.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/img/selector-icons.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/img/selector-icons.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/img/sorting-icons.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/img/sorting-icons.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/img/tooltag-add.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/img/tooltag-add.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/img/tooltag-arrowright.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/img/tooltag-arrowright.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/SelectBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/SelectBox.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/SelectFilter2.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/SelectFilter2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/actions.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/actions.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/admin/DateTimeShortcuts.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/admin/DateTimeShortcuts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/admin/RelatedObjectLookups.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/admin/RelatedObjectLookups.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/calendar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/cancel.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/cancel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/change_form.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/change_form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/collapse.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/collapse.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/collapse.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/collapse.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/core.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/core.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/inlines.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/inlines.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/inlines.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/inlines.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/jquery.init.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/jquery.init.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/popup_response.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/popup_response.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/prepopulate.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/prepopulate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/prepopulate.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/prepopulate.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/prepopulate_init.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/prepopulate_init.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/timeparse.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/timeparse.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/urlify.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/urlify.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/jquery/LICENSE-JQUERY.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/jquery/LICENSE-JQUERY.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/jquery/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/jquery/jquery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/jquery/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/jquery/jquery.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/xregexp/LICENSE-XREGEXP.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/xregexp/LICENSE-XREGEXP.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/xregexp/xregexp.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/xregexp/xregexp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/xregexp/xregexp.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/xregexp/xregexp.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticket/templates/history.html" beforeDir="false" afterPath="$PROJECT_DIR$/ticket/templates/history.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticket/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/ticket/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticket/templates/tost.html" beforeDir="false" afterPath="$PROJECT_DIR$/ticket/templates/tost.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticket/templates/watch_all.html" beforeDir="false" afterPath="$PROJECT_DIR$/ticket/templates/watch_all.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticket/templates/watch_one.html" beforeDir="false" afterPath="$PROJECT_DIR$/ticket/templates/watch_one.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tickets/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/tickets/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tickets/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/tickets/urls.py" afterDir="false" />
-    </list>
+    <list default="true" id="bd8153f4-88c9-4fe0-aff8-fa5bd7c7e80d" name="Default" comment="Изменения в контактах&#10;Добавлена главная страница." />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -573,8 +442,16 @@
       <workItem from="1574418487831" duration="2700000" />
       <workItem from="1574423617352" duration="3220000" />
       <workItem from="1575446215185" duration="1589000" />
-      <workItem from="1575448425788" duration="35883000" />
+      <workItem from="1575448425788" duration="36383000" />
     </task>
+    <task id="LOCAL-00001" summary="Изменения в контактах&#10;Добавлена главная страница.">
+      <created>1575893225671</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1575893225671</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -595,6 +472,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Изменения в контактах&#10;Добавлена главная страница." />
+    <option name="LAST_COMMIT_MESSAGE" value="Изменения в контактах&#10;Добавлена главная страница." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
