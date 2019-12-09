@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Company(models.Model):
     company = models.CharField(max_length=25)
 
@@ -12,6 +13,7 @@ class Position(models.Model):
 
     def __str__(self):
         return str(self.position)
+
 
 class Mail(models.Model):
     mail = models.CharField(max_length=40)
@@ -52,6 +54,7 @@ class Contacts(models.Model):
     tel_id = models.ForeignKey(Tel, null=True, blank=True)
     mail_id = models.ForeignKey(Mail, null=True, blank=True)
     info = models.TextField(max_length=250, blank=True)
+    is_shief = models.BooleanField(default=False)
 
     def __str__(self):
         return str(self.family_name)

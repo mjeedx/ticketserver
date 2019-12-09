@@ -1,4 +1,6 @@
 {% load staticfiles %}
+{% load filters %}
+
 
 <!DOCTYPE html>
 <html lang="ru">
@@ -15,26 +17,36 @@
 <body>
 <table class="contacts">		
 	<tr class="table_head">
-		<td>Имя</td>
+        <td>Номер</td>
 		<td>Фамилия</td>
+        <td>Имя</td>
 		<td>Должность</td>
 		<td>Телефон</td>
 		<td>Почта</td>
+        <td>Руководитель</td>
 	</tr>	
 
 
     {% for contact in contacts %}
 
       <tr class="table_body">
-          <td>{{ contact.name }}</td>
+          <td>{{ forloop.counter }}</td>
           <td>{{ contact.family_name }}</td>
+          <td>{{ contact.name }}</td>
           <td>{{ contact.department_id }}</td>
-          <td>{{ contact.tel_id }}</td>
+          <td>{{ contact.tel_id|tel_mod }}</td>
           <td><a href="mailto:{{ contact.mail_id }}">{{ contact.mail_id }}</a> </td>
+          {% if contact.is_shief == True %}
+              <td>Да</td>
+          {% else %}
+              <td>Нет</td>
+          {% endif %}
+
       </tr>
       
     {% endfor %}
 </table>
+
 		
 
 
