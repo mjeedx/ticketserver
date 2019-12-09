@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bd8153f4-88c9-4fe0-aff8-fa5bd7c7e80d" name="Default" comment="Добавил .idea в gitignore">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="bd8153f4-88c9-4fe0-aff8-fa5bd7c7e80d" name="Default" comment="Убрал .png из gitignore">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -445,7 +445,7 @@
       <workItem from="1574418487831" duration="2700000" />
       <workItem from="1574423617352" duration="3220000" />
       <workItem from="1575446215185" duration="1589000" />
-      <workItem from="1575448425788" duration="40117000" />
+      <workItem from="1575448425788" duration="40979000" />
     </task>
     <task id="LOCAL-00001" summary="Изменения в контактах&#10;Добавлена главная страница.">
       <created>1575893225671</created>
@@ -468,7 +468,21 @@
       <option name="project" value="LOCAL" />
       <updated>1575896391882</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Убрал .png из gitignore">
+      <created>1575902939428</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1575902939428</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Убрал .png из gitignore">
+      <created>1575903156561</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1575903156561</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -491,7 +505,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Изменения в контактах&#10;Добавлена главная страница." />
     <MESSAGE value="Добавил .idea в gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил .idea в gitignore" />
+    <MESSAGE value="Убрал .png из gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Убрал .png из gitignore" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
