@@ -13,8 +13,13 @@
     <meta name="author" content="">
     <title>Support</title>
     <link rel="stylesheet" href="{% static '/css/contact.css' %}">
-
+  </head>
 <body>
+	
+		<div class=back_but>
+	   		<a href="/"><input class="back" type="submit" value="Вернуться в главное меню"/></a>
+		</div>
+		
 <table class="contacts">		
 	<tr class="table_head">
         <td>Номер</td>
@@ -36,7 +41,7 @@
           <td>{{ contact.department_id }}</td>
           <td>{{ contact.tel_id|tel_mod }}</td>
           <td><a href="mailto:{{ contact.mail_id }}">{{ contact.mail_id }}</a> </td>
-          {% if contact.is_shief == True %}
+          {% if contact.is_chief == True %}
               <td>Да</td>
           {% else %}
               <td>Нет</td>

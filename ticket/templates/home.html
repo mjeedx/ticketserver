@@ -1,40 +1,45 @@
-{% extends 'base.html' %}
+{% load staticfiles %}
 
-
-{% block javascript %}
-  <script>
-    $(".id_username").change(function () {
-      console.log( $(this).val() );
-    });
-  </script>
-{% endblock %}
-
-
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>tecket</title>
+    <link rel="stylesheet" href="{% static '/css/ticket.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+  </head> 
 
 {% block form %}
 
+    <div class="back_but">
+        <a href="/">
+            
+                <input class="back" type="submit" value="Вернуться в главное меню"/>
+            
+        </a>
+    </div>
     
     <div class="home_page">
         <form action="{% url 'ticket:ticket_add' %}" method="post">
             {% csrf_token %}
             {{ form.non_field_errors }}
             <div class="input-lg">
-               <input type="text" name="who" id="id_who" placeholder="Ваше имя" required> 
+               <input type="text" name="who" id="id_who" placeholder="ВАШЕ ИМЯ" required> 
                 {{ form.who.errors }}
                 <!--  {{ form.who }}  --> 
             </div>
             <div class="input-lg">
-                <input type="text" name="where" id="id_where" placeholder="Ваш отдел" required> 
+                <input type="text" name="where" id="id_where" placeholder="ВАШ ОТДЕЛ" required> 
                 {{ form.where.errors }}
                 <!--  {{ form.where }}  -->
             </div>
             <div class="problem">
-                <textarea id="subject" name="subject" placeholder="Опишите вашу проблему" cols="40" rows="7" required></textarea>
+                <textarea id="subject" name="subject" placeholder="ОПИШИТЕ ВАШУ ПРОБЛЕМУ" cols="40" rows="7" required></textarea>
                 {{ form.subject.errors }}
                 <!--  {{ form.subject }}  -->
             </div>
             <div class="btn-send">
-                <input class="btn btn-success" type="submit" value="Отправить заявку" />
+                <input class="btn btn-success" type="submit" value="ОТПРАВИТЬ ЗАЯВКУ" />
             </div>
         </form>
     </div>

@@ -25,8 +25,29 @@ textarea#subject:focus{
   border: 1px solid #000000;
 }
 
+.back {
+	color:#000;
+	position: absolute;
+	top:10px;
+	left: 10px;
+	margin-bottom: 5px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 20%;
+	background-color: #ffffff;
+	text-align: center;
+	border-radius: 10px;
+	border-style: none;
+	transition: all 0.5s ease 0s;
+	text-transform: uppercase;
+}
+
+.back:hover{
+	background-color: #dc3b4a;
+}
+
 .problem{
-	margin-top: 15px;
+	margin-top: 10px;
 	text-align: center;
 }
 
@@ -34,6 +55,7 @@ textarea#subject:focus{
 	padding-left: 0px;
 	padding-right: 0px;
 	text-align: center;
+	margin-top: 10px;
 }
 
 .btn-send{
@@ -51,12 +73,14 @@ textarea#subject:focus{
 .btn-success{
 	background-image: linear-gradient(#2f889a, #419caf 50%, #60bfd2);
 	border: 1px solid #23434a;
+	border-radius: 5px;
 	background-color: #2f889a;
 	transition: all 0.5s ease 0s;  
 }
 
 .btn-success:hover{
 	background: #23434a;
+	color:#fff;
 	border: 1px solid #23434a;
 }
 
