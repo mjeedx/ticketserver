@@ -8,8 +8,34 @@ body{
 	background-image: url(../img/back.png);
 	background-position: center center;
 	background-repeat: no-repeat;
-	background-attachment: fixed;
 	height: 850px;
+}
+
+ul,li{
+	display: inline;
+}
+
+.nav li a{
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #000;
+	margin-right: 10px;
+	margin-left: 10px;
+	margin-top: 20px;
+}
+
+.nav li a:hover{
+	color: #6f75c1;
+}
+
+.nav{
+ 	list-style: none;
+}
+
+.navigator{
+	position: absolute;
+	top:20px;
+	right:100px;
 }
 
 .contact{
@@ -79,6 +105,5 @@ body{
 	position: absolute;
 	left: 32%;
 	right: 32%;
-	top: -40px;
-	padding-top:10px;
+	top: -40px;	
 }

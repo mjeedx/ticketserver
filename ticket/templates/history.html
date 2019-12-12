@@ -1,13 +1,18 @@
-{% extends 'base.html' %}
-
 {% block watch_all %}
+{% load staticfiles %}
 
-<div class="center-block" style="padding-left: 30%">
-    <h1>Архив</h1>
-</div>
-<div class="container-fluid">
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>history</title>
+    <link rel="stylesheet" href="{% static '/css/history.css' %}">
+  </head> 
+
+
+<div class="base">
   <table class="table">
-    <thead>
+    <thead class="table_head">
       <tr>
         <th class="col-md-1">Номер</th>
         <th class="col-md-1">ID заявки</th>
@@ -17,7 +22,7 @@
         <th class="col-md-5">Subject</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody class="table_body">
     {% for ticket in tickets %}
       <tr>
         <td class="col-md-1">{{ forloop.counter }}</td>

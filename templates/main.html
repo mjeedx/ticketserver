@@ -4,14 +4,76 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Main Menu</title>
+    <title>SUPPORT</title>
     <link rel="stylesheet" href="{% static '/css/main.css' %}">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
   </head> 
-  <div class="main_menu"></div>          
+  <body>
+  <div class="main_menu"></div> 
+
+<div class="navigator">
+
+        <ul class="nav">
+            {% if username == 'mjee' %}
+                <li class="list">
+                    <a href="{% url 'ticket:watch_all' %}">Смотреть все</a>
+                </li>
+                <li class="">
+                    <a href="{% url 'ticket:history' %}">Архив</a>
+                </li>
+                <li class="">
+                    <a href="{% url 'cart:cart_home' %}">Картриджи</a>
+                </li>
+            {% endif %}
+            {% if username %}
+            <li class="">
+                <a href="{% url 'loginsys:logout' %}">Выйти</a>
+            </li>
+            {% elif not username %}
+                <li class="login">
+                    <a href="{% url 'loginsys:login' %}">Войти</a>
+                </li>
+            {% endif %}
+        </ul> 
+
+{#<div>#}
+{#    {% if username %}#}
+{#        <p>Logged</p>#}
+{#    {% else %}#}
+{#        <p>Nonlogged</p>#}
+{#    {% endif %}#}
+{#</div>#}
+
+{% block watch_all %}{% endblock %}
+{% block cart_event_form %} {% endblock %}
+{% block form %}{% endblock %}
+{% block watch_one %}{% endblock %}
+{% block login %}{% endblock %}
+{% block thanks %}{% endblock %}
+{% block test %}{% endblock %}
+{% block watch_one_num %}{% endblock %}
+{% block watch_status %}{% endblock %}
+{% block watch_place %}{% endblock %}
+{% block watch_model %}{% endblock %}
+{% block group_ops %}{% endblock %}
+{% block register %}{% endblock %}
+{% block uploadPic %}{% endblock %}
+</div>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
 
     <div class="footer">
-        
             <div class="tecket">
                 <a href="/tickets/">
                     <input class="btn_msg_send" type="submit" value="Отправить заявку в it"/>
@@ -23,10 +85,7 @@
                     <input class="btn_msg_send" type="submit" value="Адресная книга"/>
                 </a>
             </div>
-       
-        <div class="logo">
-            
-        </div>  
+        <div class="logo"></div>  
     </div>
 
 </html>

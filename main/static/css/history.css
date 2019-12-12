@@ -1,0 +1,31 @@
+
+.table{
+	margin-top: 20px;
+	width: 100%;
+}
+
+.table_head{
+	background-color: #65f3f1;
+}
+
+.table_head th{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.table_head th:first-child{
+	border-top-left-radius: 10px;
+}
+
+.table_head th:last-child{
+	border-top-right-radius: 10px;
+}
+
+.table_body{
+	background-color: #ffe795;
+}
+
+.table_body td{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}

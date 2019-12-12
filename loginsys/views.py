@@ -4,7 +4,6 @@ from django.contrib import auth
 from django.contrib.auth.forms import UserCreationForm
 
 
-
 def login(request):
     args = {}
     args.update(csrf(request))
@@ -21,7 +20,7 @@ def login(request):
 
 def logout(request):
     auth.logout(request)
-    return redirect("/tickets/")
+    return redirect('/')
 
 def register(request):
     args = {}
