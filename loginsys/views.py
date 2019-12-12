@@ -12,7 +12,7 @@ def login(request):
     user = auth.authenticate(username=username, password=password)
     if user is not None:
         auth.login(request, user)
-        return redirect('/polls')
+        return redirect('/')
     else:
         args['login_error'] = "Пользователь не найден"
         return render_to_response('login.html', args)
