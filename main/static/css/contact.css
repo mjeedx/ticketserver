@@ -4,34 +4,28 @@ body{
 	overflow: auto;
 }
 
-.table{
-	width: 100%;
+.table_head,
+.back{
+	text-transform: uppercase;
 }
 
-.table_head{
+.table_head td{
 	background-color: #65f3f1;
+	padding:10px;
+	width: 500px;
 }
 
-.table_head th{
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
-
-.table_head th:first-child{
+.table_head td:first-child{
 	border-top-left-radius: 10px;
 }
 
-.table_head th:last-child{
+.table_head td:last-child{
 	border-top-right-radius: 10px;
 }
 
-.table_body{
-	background-color: #ffe795;
-}
-
 .table_body td{
-	padding-top: 10px;
-	padding-bottom: 10px;
+	background-color: #ffe795;
+	padding:10px;
 }
 
 .back {
@@ -47,6 +41,11 @@ body{
 	transition: all 0.5s ease 0s;
 }
 
+.back_but{
+	text-align: center;
+}
+
 .back:hover{
 	background-color: #dc3b4a;
 }
+
