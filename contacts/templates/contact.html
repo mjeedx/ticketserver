@@ -22,25 +22,25 @@
 		
 <table class="contacts">		
 	<tr class="table_head">
-        <td>Номер</td>
+        <td class="col-1">Номер</td>
 		<td>Фамилия</td>
         <td>Имя</td>
 		<td>Отдел</td>
 		<td>Телефон</td>
 		<td>Почта</td>
-        <td>Руководитель</td>
+        <td class="col-1">Руководитель</td>
 	</tr>	
 
 
     {% for contact in contacts %}
 
       <tr class="table_body">
-          <td>{{ forloop.counter }}</td>
+          <td class="col-1">{{ forloop.counter }}</td>
           <td>{{ contact.family_name }}</td>
           <td>{{ contact.name }}</td>
           <td>{{ contact.department_id }}</td>
           <td>{{ contact.tel_id|tel_mod }}</td>
-          <td><a href="mailto:{{ contact.mail_id }}">{{ contact.mail_id }}</a> </td>
+          <td class="col-1"><a href="mailto:{{ contact.mail_id }}">{{ contact.mail_id }}</a> </td>
           {% if contact.is_chief == True %}
               <td>Да</td>
           {% else %}

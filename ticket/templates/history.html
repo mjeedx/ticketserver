@@ -16,23 +16,23 @@
   <table class="table">
     <thead class="table_head">
       <tr>
-        <th class="col-md-1">Номер</th>
-        <th class="col-md-1">ID заявки</th>
-        <th class="col-md-1">Отправитель</th>
-        <th class="col-md-1">Место</th>
-        <th class="col-md-2">Дата поступления</th>
-        <th class="col-md-5">Subject</th>
+        <th class="col-1">Номер</th>
+        <th class="col-1">ID заявки</th>
+        <th class="col-1">Отправитель</th>
+        <th class="col-1">Место</th>
+        <th class="col-1">Дата поступления</th>
+        <th class="col-2">Subject</th>
       </tr>
     </thead>
     <tbody class="table_body">
     {% for ticket in tickets %}
       <tr>
-        <td class="col-md-1">{{ forloop.counter }}</td>
-        <td class="col-md-1">{{ ticket.id }}</td>
-        <td class="col-md-1">{{ ticket.who }}</td>
-        <td class="col-md-1">{{ ticket.where }}</td>
-        <td class="col-md-2">{{ ticket.when }}</td>
-        <td class="col-md-5"><a href="{% url 'ticket:watch_one' ticket_id=ticket.id %}">{{ ticket.subject }}</a></td>
+        <td class="col-1">{{ forloop.counter }}</td>
+        <td class="col-1">{{ ticket.id }}</td>
+        <td class="col-1">{{ ticket.who }}</td>
+        <td class="col-1">{{ ticket.where }}</td>
+        <td class="col-1">{{ ticket.when }}</td>
+        <td class="col-2"><a href="{% url 'ticket:watch_one' ticket_id=ticket.id %}">{{ ticket.subject }}</a></td>
        </tr>
     {% endfor %}
     </tbody>
