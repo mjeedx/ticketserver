@@ -1,9 +1,25 @@
-{% extends 'base.html' %}
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>history</title>
+    <link rel="stylesheet" href="{% static '/css/cart_home.css' %}">
+  </head>
+
+<div class="navigator">
+    <ul>
+        <li>
+            <a href="{% url 'cart:cart_home' %}"><input class="back" type="submit" value="Вернуться в картриджи"/></a>
+        </li>
+    </ul>
+</div>
 
 {% block watch_place %}
 <div class="container-fluid">
     <table class="table">
-        <thead>
+        <thead class="table_head">
             <tr>
                 <th class="col-md-3">Дата</th>
                 <th class="col-md-3">Номер</th>
@@ -12,7 +28,7 @@
             </tr>
         </thead>
     {% for cart in carts %}
-        <tbody>
+        <tbody class="table_body">
             <tr>
                 <td class="col-md-3">{{ cart.last_datetime }}</td>
                 <td class="col-md-3">{{ cart.num }}</td>

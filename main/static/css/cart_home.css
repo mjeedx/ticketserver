@@ -1,0 +1,113 @@
+body{
+	display: block;
+	background: linear-gradient(#3e49ce, #23a9d2 50%, #ffffff) no-repeat;
+	overflow: auto;
+}
+
+.back {
+	text-transform: uppercase;
+	color:#000;
+	margin-bottom: 5px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 20%;
+	background-color: #fff;
+	text-align: center;
+	border-radius: 10px;
+	border-style: none;
+	transition: all 0.5s ease 0s;
+}
+
+.subm{
+	text-transform: uppercase;
+	color:#000;
+	margin-bottom: 5px;
+	padding: 10px 40px;
+	border-radius: 10px;
+	margin-top: 15px;
+	border: 1px solid black;
+	transition: all 0.5s ease 0s;
+}
+
+.subm:hover{
+	background-color: #c8f7c8;
+}
+
+.back:hover{
+	background-color: #dc3b4a;
+}
+
+ul, li{
+	list-style: none;
+	display: inline;
+}
+
+.initial,
+.form-group{
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-transform: uppercase;
+	border: 1px solid black;
+	border-radius: 10px;
+	background-color: white;
+	width: 30%;
+}
+
+.number{
+	padding-right: 10px;
+}
+
+.table_head{
+	background-color: #65f3f1;
+}
+
+.table_head th{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.table_head th:first-child{
+	border-top-left-radius: 10px;
+}
+
+.table_head th:last-child{
+	border-top-right-radius: 10px;
+}
+
+.table_body{
+	background-color: #ffe795;
+}
+
+.table_body td{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+table{
+	width: 100%;
+}
+
+.coll-1{
+	width: 5%;
+}
+
+th, td{
+	text-align: center;
+}
+
+.input{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 35%;
+}
+
+.but_send,
+.form-group{
+	text-align: center;
+}
+

@@ -1,60 +1,82 @@
+{% load staticfiles %}
 
-
-
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>history</title>
+    <link rel="stylesheet" href="{% static '/css/cart_home.css' %}">
+  </head>
 
 {% block cart_event_form %}
-<a href="{% url 'cart:group_ops' %}">Групповые операции</a>
-<div class="container">
-    <div class="form-group" align="center">
+
+<div class="navigator">
+    <ul>
+        <li>
+            <a href="/"><input class="back" type="submit" value="Вернуться в главное меню"/></a>
+        </li>
+        <li>
+            <a href="{% url 'cart:group_ops' %}"><input class="back" type="submit" value="Групповые операции"/></a>
+        </li>
+    </ul>
+</div>    
+
+    <div class="initial">
+    
         <form action="{% url 'cart:event_add' %}" method="post">
             {% csrf_token %}
             {{ form.non_field_errors }}
-            <div class="input-lg" >
+            <div class="input" >
                 <label for="cart_number">Номер: </label>
                 {{ form.num.errors }}
                 {{ form.num }}
             </div>
-            <div class="input-lg">
-                <label for="status">Статус</label>
+            <div class="input">
+                <label for="status">Статус: </label>
                 {{ form.status.errors }}
                 {{ form.status }}
             </div>
-            <div class="input-lg">
-                <label for="place">Место</label>
+            <div class="input">
+                <label for="place">Место: </label>
                 {{ form.place.errors }}
                 {{ form.place }}
             </div>
-            <input class="btn btn-success" type="submit" value="Submit" />
+            <div class="but_send">
+                <input class="subm" type="submit" value="Принять" />
+            </div>
         </form>
+  
     </div>
-</div>
-<div class="container-fluid">
+
+
+
+<div class="info">
     <table class="table">
-        <thead>
+        <thead class="table_head">
             <tr>
-                <th>ID евента</th>
+                <th class="coll-1">ID евента</th>
                 <th>Дата</th>
-                <th>Номер</th>
+                <th class="coll-1">Номер</th>
                 <th>Статус</th>
-                <th>Extra</th>
+                <th class="coll-1">Extra</th>
                 <th>Модель</th>
                 <th>Место</th>
             </tr>
         </thead>
         {% for cart in Cartridge %}
-            <tbody>
+            <tbody class="table_body">
                 <tr>
-                    <td>{{ cart.id }}</td>
+                    <td class="coll-1">{{ cart.id }}</td>
                     <td>{{ cart.last_datetime }}</td>
-                    <td><a href="{% url 'cart:watch_one_num' num_id=cart.num_id %}">{{ cart.num }}</a></td>
+                    <td class="coll-1"><a href="{% url 'cart:watch_one_num' num_id=cart.num_id %}">{{ cart.num }}</a></td>
 
                     <td><a href="{% url 'cart:watch_status' status_id=cart.status_id %}">{{ cart.status }}</a></td>
                     {% if cart.status_id == 1 %}
-                        <td><a class="btn-warning" href="{% url 'cart:send_refill' num_id=cart.num_id %}">На заправку!</a></td>
+                        <td class="coll-1"><a class="btn-warning" href="{% url 'cart:send_refill' num_id=cart.num_id %}">На заправку!</a></td>
                     {% elif cart.status_id == 3%}
                         <td><a class="btn-success" href="{% url 'cart:homecoming' num_id=cart.num_id %}">На склад!</a></td>
                     {% else%}
-                        <td style="color: white">blank</td>
+                        <td>blank</td>
                     {% endif %}
                     <td><a href="{% url 'cart:watch_model' model_id=cart.num.modell_id %}">{{ cart.num.modell }}</a></td>
                     <td><a href="{% url 'cart:watch_place' place_id=cart.place_id %}">{{ cart.place }}</a></td>

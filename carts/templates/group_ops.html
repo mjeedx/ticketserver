@@ -1,24 +1,35 @@
-{% extends 'base.html' %}
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>history</title>
+    <link rel="stylesheet" href="{% static '/css/cart_home.css' %}">
+  </head>
+
+
+<div class="navigator">
+    <ul>
+        <li>
+            <a href="{% url 'cart:cart_home' %}"><input class="back" type="submit" value="Вернуться в картриджи"/></a>
+        </li>
+    </ul>
+</div> 
 
 {% block group_ops %}
 
-<div class="container">
-    <div class="form-group" align="center">
+    <div class="form-group">
         <form action="{% url 'cart:get_group_ops' %}" method="post">
             {% csrf_token %}
             {{ form.non_field_errors }}
-            <div class="input-lg">
+            <div>
                 <label for="cart_numbers">Номера</label>
                 {{ form.non_field_errors }}
                 {{ form.nums }}
             </div>
-            <input class="btn btn-success" type="submit" value="Приехать" />
+            <input class="subm" type="submit" value="Приехать" />
         </form>
     </div>
-
-</div>
-
-
-
 
 {% endblock %}
