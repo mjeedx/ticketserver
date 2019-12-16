@@ -33,12 +33,14 @@ def send_ticket(request):
             form = Ticket_Form(request.POST)
             if form.is_valid:
                 x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+
                 if x_forwarded_for:
                     ip = x_forwarded_for.split(',')[0]
                 else:
                     ip = request.META.get('REMOTE_ADDR')
                 ticket = form.save(commit=False)
                 ticket.ip = ip
+                ticket.when = timezone.now()
                 ticket.save() # Сохраняем тикет в базу
 
                 message = request.POST.get("who") + " " + \
@@ -85,8 +87,10 @@ def confirm(request, ticket_id):
         if not selected_ticket.finished:
             selected_ticket.finished = True
             selected_ticket.date_end = timezone.now()
+            print("test_mark")
         elif selected_ticket.finished:
             selected_ticket.finished = False
+            print("test_2")
         selected_ticket.save()
     except ObjectDoesNotExist:
         raise Http404

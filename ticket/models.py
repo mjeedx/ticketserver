@@ -5,7 +5,7 @@ class Tickets(models.Model):
     who = models.CharField(max_length=150)
     subject = models.TextField()
     where = models.CharField(max_length=200)
-    when = models.DateTimeField(auto_now=True)
+    when = models.DateTimeField(auto_now=False)
     date_end = models.DateTimeField(auto_now=False, null=True)
     finished = models.BooleanField(default=False)
     deleted = models.BooleanField(default=False)

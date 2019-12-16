@@ -21,6 +21,7 @@
         <th class="col-1">Отправитель</th>
         <th class="col-1">Место</th>
         <th class="col-1">Дата поступления</th>
+        <th class="col-1">Дата завершения</th>
         <th class="col-2">Subject</th>
         <th class="col-1">Статус</th>
       </tr>
@@ -37,6 +38,7 @@
         <td class="col-1">{{ ticket.who }}</td>
         <td class="col-1">{{ ticket.where }}</td>
         <td class="col-1">{{ ticket.when }}</td>
+        <td class="col-1">{{ ticket.date_end }}</td>
         <td class="col-2"><a href="{% url 'ticket:watch_one' ticket_id=ticket.id %}">{{ ticket.subject }}</a></td>
         {% if ticket.finished is True %}
             <td class="col-1">Готово</td>
