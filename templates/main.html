@@ -12,12 +12,25 @@
   <div class="main_menu"></div> 
 
 <div class="navigator">
+    {% if username == 'mjee' %}
+        {% if not_finished > 0 %}
+            <div class="tickets_not_finished">
+                <a href="{% url 'ticket:watch_all' %}"> {{ not_finished }}</a>
+            </div>
+        {% endif %}
+    {% if new_tickets > 0 %}
+            <div class="tickets_ready">
+                <a href="{% url 'ticket:watch_all' %}"> {{ new_tickets }}</a>
+            </div>
+        {% endif %}
+    {% endif %}
 
         <ul class="nav">
             {% if username == 'mjee' %}
                 <li class="list">
-                    <a href="{% url 'ticket:watch_all' %}">Смотреть все</a>
+                    <a href="{% url 'ticket:watch_all' %}">Заявки</a>
                 </li>
+
                 <li>
                     <a href="{% url 'ticket:history' %}">Архив</a>
                 </li>
@@ -25,13 +38,16 @@
                     <a href="{% url 'cart:cart_home' %}">Картриджи</a>
                 </li>
             {% endif %}
+                <li>
+                    <a class="blink" href="{% url 'you_tube' %}"> (✖╭╮✖) Видео ( ͡° ͜ʖ ͡°)</a>
+                </li>
             {% if username %}
-            <li class="">
-                <a href="{% url 'loginsys:logout' %}">Выйти</a>
-            </li>
+            	<li class="">
+               		 <a href="{% url 'loginsys:logout' %}">Выйти</a>
+           		 </li>
             {% elif not username %}
                 <li class="login">
-                    <a href="{% url 'loginsys:login' %}">Войти</a>
+                    <a href="{% url 'loginsys:login' %}">Login</a>
                 </li>
             {% endif %}
         </ul> 

@@ -7,6 +7,7 @@ class Tickets(models.Model):
     where = models.CharField(max_length=200)
     when = models.DateTimeField(auto_now=False)
     date_end = models.DateTimeField(auto_now=False, null=True)
+    confirmed = models.BooleanField(default=False)
     finished = models.BooleanField(default=False)
     deleted = models.BooleanField(default=False)
     ip = models.CharField(max_length=50, blank=True)

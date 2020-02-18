@@ -2,4 +2,5 @@
 *.jpg
 *.pyc
 *.jpeg
-.idea
+.idea/
+settings.py

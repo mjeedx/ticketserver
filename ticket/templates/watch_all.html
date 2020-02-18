@@ -42,8 +42,12 @@
         <td class="col-2"><a href="{% url 'ticket:watch_one' ticket_id=ticket.id %}">{{ ticket.subject }}</a></td>
         {% if ticket.finished is True %}
             <td class="col-1">Готово</td>
-        {% else %}
+        {% elif ticket.confirmed is True %}
             <td class="col-1">В работе!</td>
+        {% elif ticket.confirmed is False %}
+{#            <td class="col-1">not confirmed</td>#}
+            <td class="col-1"><a href="{% url 'ticket:confirm' ticket_id=ticket.id %}">Принять</a></td>
+
         {% endif %}
        </tr>
     {% endfor %}

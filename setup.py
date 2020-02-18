@@ -9,5 +9,5 @@ setup(
     license='',
     author='mjee',
     author_email='',
-    description=''
+    description='', requires=['requests', 'django']
 )

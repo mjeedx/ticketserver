@@ -11,7 +11,6 @@ from ticket.models import Tickets
 from django.contrib import auth
 from requests import get
 
-
 send_message = "https://api.telegram.org/bot495013188:AAEXwQcQFFifEpkstwzOafUK7EIDohr-wUI/sendMessage?chat_id=-300176051&text="
 
 
@@ -41,12 +40,12 @@ def send_ticket(request):
                 ticket = form.save(commit=False)
                 ticket.ip = ip
                 ticket.when = timezone.now()
-                ticket.save() # Сохраняем тикет в базу
+                ticket.save()  # Сохраняем тикет в базу
 
                 message = request.POST.get("who") + " " + \
                           request.POST.get("where") + " " + \
                           request.POST.get("subject")
-                get(send_message + message)
+                get(send_message + message)  # Отправить текст сообщения в телеграмм
 
 
     except ObjectDoesNotExist:
@@ -80,24 +79,38 @@ def watch_one(request, ticket_id):
     return render_to_response('watch_one.html', args)
 
 
-# Экшн подтверждения выполнения заявки
+# Экшн принятия заявки
 def confirm(request, ticket_id):
     try:
         selected_ticket = Tickets.objects.get(id=ticket_id)
-        if not selected_ticket.finished:
-            selected_ticket.finished = True
+        if not selected_ticket.confirmed:
+            selected_ticket.confirmed = True
             selected_ticket.date_end = timezone.now()
-            print("test_mark")
-        elif selected_ticket.finished:
-            selected_ticket.finished = False
-            print("test_2")
+        elif selected_ticket.confirmed:
+            selected_ticket.confirmed = False
         selected_ticket.save()
     except ObjectDoesNotExist:
         raise Http404
     return HttpResponseRedirect('/tickets/all/')
 
 
-# Экшн "удаления" записи
+# Экшн подтверждения выполнения и архивации заявки
+def finish(request, ticket_id):
+    try:
+        selected_ticket = Tickets.objects.get(id=ticket_id)
+        if not selected_ticket.finished:
+            selected_ticket.finished = True
+            selected_ticket.deleted = True
+            selected_ticket.date_end = timezone.now()
+        elif selected_ticket.finished:
+            selected_ticket.finished = False
+        selected_ticket.save()
+    except ObjectDoesNotExist:
+        raise Http404
+    return HttpResponseRedirect('/tickets/all/')
+
+
+# Экшн "Архивирования" записи
 def delete_row(request, ticket_id):
     try:
         selected_ticket = Tickets.objects.get(id=ticket_id)
@@ -110,9 +123,8 @@ def delete_row(request, ticket_id):
 
 def test(request):
     count = Tickets.objects.filter(finished=False)
-    if count.__len__() >0:
+    if count.__len__() > 0:
         return JsonResponse({"ok": "ok"})
     else:
         a = {'tickets': "clear"}
         return JsonResponse(a)
-

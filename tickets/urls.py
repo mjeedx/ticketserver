@@ -25,6 +25,7 @@ urlpatterns = [
     url(r'^carts/', include('carts.urls')),
     url(r'^tickets/', include('ticket.urls')),
     url(r'^polls/', include('polls.urls')),
+    url(r'^video/$', views.you_tube, name='you_tube'),
     url(r'^', views.main),
 ] # + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 #+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

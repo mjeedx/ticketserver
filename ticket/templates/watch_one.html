@@ -15,15 +15,16 @@
     <p class="when">Дата поступления:{{ ticket.when }}</p>
     <p class="where">Отдел:{{ ticket.where }}</p>
     <p class="who">Имя:{{ ticket.who }}</p>
-    <p class="finished">Статус:{{ ticket.finished }}</p>
+    <p class="confirmed">Принято:{{ ticket.confirmed }}</p>
+    <p class="finished">Готово:{{ ticket.finished }}</p>
     <p class="ip">Адресс:{{ ticket.ip }}</p>
     <p class="subject"><strong>{{ ticket.subject }}</strong></p>
 </div>
 
 <div class="button_ok">
-    <a href="{% url 'ticket:confirm' ticket_id=ticket.id %}" type="button" class="good">Готово!</a>
+    <a href="{% url 'ticket:finish' ticket_id=ticket.id %}" type="button" class="good">Готово!</a>
 
-    <a href="{% url 'ticket:delete_row' ticket_id=ticket.id %}" type="button" class="delete">Удалить заявку.</a>
+    <a href="{% url 'ticket:delete_row' ticket_id=ticket.id %}" type="button" class="delete">Архивировать.</a>
 </div>
 
 

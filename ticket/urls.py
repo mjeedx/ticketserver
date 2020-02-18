@@ -14,6 +14,7 @@ urlpatterns = [
     url(r'^watch/(?P<ticket_id>[0-9]+)/$', views.watch_one, name='watch_one'),
     url(r'^history/$', views.history, name='history'),
     url(r'^ticket_add/$', views.send_ticket, name='ticket_add'),
+    url(r'^finish/(?P<ticket_id>[0-9]+)/$', views.finish, name='finish'),
     url(r'^confirm/(?P<ticket_id>[0-9]+)/$', views.confirm, name='confirm'),
 ]
 
