@@ -11,7 +11,7 @@ class Modell(models.Model):
 
 class Num(models.Model):
     num = models.IntegerField(unique=True)
-    modell = models.ForeignKey(Modell)
+    modell = models.ForeignKey(Modell, on_delete=models.PROTECT)
 
     def __str__(self):
         return str(self.num)
@@ -32,10 +32,10 @@ class Place(models.Model):
 
 
 class Cartridge(models.Model):
-    num = models.ForeignKey(Num)
+    num = models.ForeignKey(Num, on_delete=models.PROTECT)
     fill_count = models.IntegerField(default=0)
-    status = models.ForeignKey(Status)
-    place = models.ForeignKey(Place)
+    status = models.ForeignKey(Status, on_delete=models.PROTECT)
+    place = models.ForeignKey(Place, on_delete=models.PROTECT)
     last_datetime = models.DateTimeField(auto_now=True)
 
     def __str__(self):
@@ -44,9 +44,9 @@ class Cartridge(models.Model):
 
 class Events(models.Model):
     date = models.DateTimeField(auto_now=True)
-    num = models.ForeignKey(Num)
-    status = models.ForeignKey(Status, default=1)
-    place = models.ForeignKey(Place)
+    num = models.ForeignKey(Num, on_delete=models.PROTECT)
+    status = models.ForeignKey(Status, default=1, on_delete=models.PROTECT)
+    place = models.ForeignKey(Place, on_delete=models.PROTECT)
     comment = models.TextField(max_length=200, blank=True)
     deleted = models.BooleanField(default=False)
 

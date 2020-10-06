@@ -1,9 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bd8153f4-88c9-4fe0-aff8-fa5bd7c7e80d" name="Default" comment="Убрал .png из gitignore">
+    <list default="true" id="bd8153f4-88c9-4fe0-aff8-fa5bd7c7e80d" name="Default" comment="- добавлены новые видео">
+      <change afterPath="$PROJECT_DIR$/carts/migrations/0012_auto_20200419_0901.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contacts/migrations/0010_auto_20200419_0901.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/macmap/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/macmap/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/macmap/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/macmap/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/macmap/migrations/0002_sw_list_port.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/macmap/migrations/0003_auto_20200419_0901.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/macmap/migrations/0004_sw_db_enable.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/macmap/migrations/0005_auto_20200422_2216.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/macmap/migrations/0006_auto_20200422_2220.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/macmap/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/macmap/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/macmap/templates/macmap.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/macmap/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/macmap/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/macmap/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/polls/migrations/0020_auto_20200419_0901.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements_ubuntu.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/secret.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9fb0696f-af95-47ea-9970-6194db707b4b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9fb0696f-af95-47ea-9970-6194db707b4b.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b0564419-d4c0-43a1-9d52-3cdd4f0299c9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b0564419-d4c0-43a1-9d52-3cdd4f0299c9.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/tickets.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/tickets.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/111.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/carts/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/carts/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/carts/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carts/templates/cart_home.html" beforeDir="false" afterPath="$PROJECT_DIR$/carts/templates/cart_home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carts/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/carts/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/carts/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contacts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/contacts/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/polls/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/polls/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tickets/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/tickets/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tickets/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/tickets/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,22 +86,6 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="db.sqlite3" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
-        <item name="ticket_tickets: table" type="3d80ac25:SqliteImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="serv_db.sqlite3" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="serv_db.sqlite3" type="feb32156:DbDataSourceImpl" />
-        <item name="collations" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
     </expand>
     <select />
   </component>
@@ -91,6 +109,9 @@
     <option name="UPDATE_CHANGES_POLICY" value="SHELVE" />
     <option name="UPDATE_TYPE" value="MERGE" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/carts/views.py" root0="SKIP_INSPECTION" />
+  </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
     <exe-path />
@@ -111,9 +132,9 @@
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="" />
     <property name="js.eslint.eslintPackage" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../test_service/test_service.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs.jest.jest_package" value="" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="Docker" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/carts/views.py" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -125,19 +146,19 @@
     </option>
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\my\Python\PycharmProjects\2\tickets\polls\templates" />
-      <recent name="D:\my\Python\PycharmProjects\2\tickets\polls\static" />
-      <recent name="D:\my\Python\PycharmProjects\2\tickets\media" />
-      <recent name="D:\my\Python\PycharmProjects\2\tickets\ticket\static" />
-      <recent name="D:\my\Python\PycharmProjects\2\tickets\photos" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Python\Tickets\static\img" />
       <recent name="D:\my\Python\PycharmProjects\2\tickets\polls\static" />
       <recent name="D:\my\Python\PycharmProjects\2\tickets\polls\templates" />
       <recent name="D:\my\Python\PycharmProjects\2\tickets\photos" />
       <recent name="D:\my\Python\PycharmProjects\2\tickets\polls\static\photos" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\my\Python\PycharmProjects\2\tickets\polls\templates" />
+      <recent name="D:\my\Python\PycharmProjects\2\tickets\polls\static" />
+      <recent name="D:\my\Python\PycharmProjects\2\tickets\media" />
+      <recent name="D:\my\Python\PycharmProjects\2\tickets\ticket\static" />
+      <recent name="D:\my\Python\PycharmProjects\2\tickets\photos" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -173,7 +194,7 @@
       <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
-    <configuration name="111" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="chmc" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="tickets" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -181,34 +202,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/111.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Asker1" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="tickets" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../test_service" />
+      <option name="WORKING_DIRECTORY" value="D:/" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../test_service/Asker1.py" />
+      <option name="SCRIPT_NAME" value="D:/chmc.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -239,7 +238,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="pyzip" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="tickets" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -247,12 +246,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Desktop" />
+      <option name="WORKING_DIRECTORY" value="E:/" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/Desktop/test.py" />
+      <option name="SCRIPT_NAME" value="E:/pyzip.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -261,7 +260,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test_service (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="rename" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="tickets" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -269,12 +268,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../test_service" />
+      <option name="WORKING_DIRECTORY" value="E:/" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../test_service/test_service.py" />
+      <option name="SCRIPT_NAME" value="E:/rename.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -283,7 +282,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test_service" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="tost" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="tickets" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -291,12 +290,34 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.." />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/macmap" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../test_service.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/macmap/tost.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="views" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="tickets" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/macmap" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/macmap/views.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -319,7 +340,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="launchJavascriptDebuger" value="false" />
-      <option name="port" value="8000" />
+      <option name="port" value="80" />
       <option name="host" value="192.168.1.111" />
       <option name="additionalOptions" value="" />
       <option name="browserUrl" value="" />
@@ -388,37 +409,28 @@
     <list>
       <item itemvalue="Django server.tickets" />
       <item itemvalue="Python.models" />
-      <item itemvalue="Python.111" />
-      <item itemvalue="Python.test_service" />
-      <item itemvalue="Python.test_service (1)" />
-      <item itemvalue="Python.Asker1" />
-      <item itemvalue="Python.test" />
+      <item itemvalue="Python.tost" />
+      <item itemvalue="Python.views" />
+      <item itemvalue="Python.chmc" />
+      <item itemvalue="Python.rename" />
+      <item itemvalue="Python.pyzip" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.test" />
-        <item itemvalue="Python.Asker1" />
-        <item itemvalue="Python.test_service (1)" />
-        <item itemvalue="Python.test_service" />
-        <item itemvalue="Python.111" />
+        <item itemvalue="Python.pyzip" />
+        <item itemvalue="Python.rename" />
+        <item itemvalue="Python.chmc" />
+        <item itemvalue="Python.views" />
+        <item itemvalue="Python.tost" />
       </list>
     </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="allServicesViewState">
       <serviceView>
+        <option name="contentProportion" value="0.12770563" />
         <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@9e2c6655" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@9e2c6655" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@279a9877" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-          </expand>
+          <expand />
           <select />
         </treeState>
       </serviceView>
@@ -445,7 +457,55 @@
       <workItem from="1574418487831" duration="2700000" />
       <workItem from="1574423617352" duration="3220000" />
       <workItem from="1575446215185" duration="1589000" />
-      <workItem from="1575448425788" duration="40979000" />
+      <workItem from="1575448425788" duration="57405000" />
+      <workItem from="1576136291974" duration="11017000" />
+      <workItem from="1576501689128" duration="3789000" />
+      <workItem from="1579889488005" duration="7000" />
+      <workItem from="1579890975159" duration="1556000" />
+      <workItem from="1579893683180" duration="818000" />
+      <workItem from="1581532115360" duration="5981000" />
+      <workItem from="1581578490905" duration="17993000" />
+      <workItem from="1582011405859" duration="4969000" />
+      <workItem from="1582118573360" duration="74801000" />
+      <workItem from="1586051757207" duration="3766000" />
+      <workItem from="1587237243987" duration="18721000" />
+      <workItem from="1587384355441" duration="1726000" />
+      <workItem from="1587386115924" duration="1759000" />
+      <workItem from="1587389023662" duration="1798000" />
+      <workItem from="1587390842786" duration="887000" />
+      <workItem from="1587518670070" duration="1298000" />
+      <workItem from="1587580366853" duration="1792000" />
+      <workItem from="1587582183235" duration="1710000" />
+      <workItem from="1587620293745" duration="1058000" />
+      <workItem from="1587811944231" duration="624000" />
+      <workItem from="1589907600314" duration="1388000" />
+      <workItem from="1589909031064" duration="247000" />
+      <workItem from="1590153085338" duration="1506000" />
+      <workItem from="1591717404344" duration="1415000" />
+      <workItem from="1591719122497" duration="1791000" />
+      <workItem from="1591720933260" duration="1801000" />
+      <workItem from="1591722756483" duration="1791000" />
+      <workItem from="1591724573651" duration="1606000" />
+      <workItem from="1591726487124" duration="1793000" />
+      <workItem from="1591728405497" duration="1686000" />
+      <workItem from="1591730223333" duration="2006000" />
+      <workItem from="1591767291859" duration="2429000" />
+      <workItem from="1592307388334" duration="838000" />
+      <workItem from="1592374910103" duration="1866000" />
+      <workItem from="1592815165889" duration="597000" />
+      <workItem from="1592862612283" duration="246000" />
+      <workItem from="1595056008242" duration="14338000" />
+      <workItem from="1596442319947" duration="650000" />
+      <workItem from="1597305630785" duration="1733000" />
+      <workItem from="1597390943254" duration="464000" />
+      <workItem from="1598015588449" duration="3411000" />
+      <workItem from="1598087107788" duration="36336000" />
+      <workItem from="1599367434195" duration="3321000" />
+      <workItem from="1599371064495" duration="16721000" />
+      <workItem from="1599637461525" duration="2714000" />
+      <workItem from="1599880923764" duration="6481000" />
+      <workItem from="1600782783667" duration="4924000" />
+      <workItem from="1601954922595" duration="6673000" />
     </task>
     <task id="LOCAL-00001" summary="Изменения в контактах&#10;Добавлена главная страница.">
       <created>1575893225671</created>
@@ -482,7 +542,119 @@
       <option name="project" value="LOCAL" />
       <updated>1575903156561</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Убрал .png из gitignore">
+      <created>1575903768368</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1575903768368</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Убрал .png из gitignore">
+      <created>1575962103153</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1575962103153</updated>
+    </task>
+    <task id="LOCAL-00008" summary="1.Добавил в модель &quot;Конаткты&quot; свойства полям &quot;Уникальные&quot;.&#10;2. Отключил наследование шаблонов у тикетов.">
+      <created>1575986190827</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1575986190827</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Эксперимент. Поправил миграцию.">
+      <created>1575989370985</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1575989370986</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Сдеал адаптивным лого.">
+      <created>1576071623335</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1576071623336</updated>
+    </task>
+    <task id="LOCAL-00011" summary="- Добавил меню.&#10;- Изменил History &amp; Thanks страницы&#10;- Поправили переадресацию после логаута">
+      <created>1576153920988</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1576153920989</updated>
+    </task>
+    <task id="LOCAL-00012" summary="- поправил редиррект а главную">
+      <created>1576154675740</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1576154675740</updated>
+    </task>
+    <task id="LOCAL-00013" summary="- чистка лишних статик файлов">
+      <created>1576155324893</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1576155324893</updated>
+    </task>
+    <task id="LOCAL-00014" summary="- убрал наследование в картриджах&#10;- поправил">
+      <created>1576227083585</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1576227083585</updated>
+    </task>
+    <task id="LOCAL-00015" summary="- убрал остатки наследования&#10;- запилил стили картриджам">
+      <created>1576245984705</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1576245984705</updated>
+    </task>
+    <task id="LOCAL-00016" summary="- поправил дату в модели тикетов &#10;- добавил в &quot;смотреть все тикеты&quot; поле &quot;Дата закрытия тикета&quot;">
+      <created>1576504407666</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1576504407666</updated>
+    </task>
+    <task id="LOCAL-00017" summary="- добавлена страница с видео&#10;- нажатие кнопки &quot;готово&quot; в заявках приводит к подтверждению и архивации заявки&#10;- на главной добавлены индикаторы количества выполняемых и новых заявок&#10;- реализован механизм подтверждения новых заявок">
+      <created>1582016863306</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1582016863306</updated>
+    </task>
+    <task id="LOCAL-00018" summary="- устранены мелкие баги">
+      <created>1582019965669</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1582019965669</updated>
+    </task>
+    <task id="LOCAL-00019" summary="- добавлены новые видео">
+      <created>1582045784064</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1582045784064</updated>
+    </task>
+    <task id="LOCAL-00020" summary="- добавлены новые видео">
+      <created>1582210958066</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1582210958066</updated>
+    </task>
+    <task id="LOCAL-00021" summary="- добавлены новые видео">
+      <created>1582211145938</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1582211145938</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -506,7 +678,19 @@
     <MESSAGE value="Изменения в контактах&#10;Добавлена главная страница." />
     <MESSAGE value="Добавил .idea в gitignore" />
     <MESSAGE value="Убрал .png из gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Убрал .png из gitignore" />
+    <MESSAGE value="1.Добавил в модель &quot;Конаткты&quot; свойства полям &quot;Уникальные&quot;.&#10;2. Отключил наследование шаблонов у тикетов." />
+    <MESSAGE value="Эксперимент. Поправил миграцию." />
+    <MESSAGE value="Сдеал адаптивным лого." />
+    <MESSAGE value="- Добавил меню.&#10;- Изменил History &amp; Thanks страницы&#10;- Поправили переадресацию после логаута" />
+    <MESSAGE value="- поправил редиррект а главную" />
+    <MESSAGE value="- чистка лишних статик файлов" />
+    <MESSAGE value="- убрал наследование в картриджах&#10;- поправил" />
+    <MESSAGE value="- убрал остатки наследования&#10;- запилил стили картриджам" />
+    <MESSAGE value="- поправил дату в модели тикетов &#10;- добавил в &quot;смотреть все тикеты&quot; поле &quot;Дата закрытия тикета&quot;" />
+    <MESSAGE value="- добавлена страница с видео&#10;- нажатие кнопки &quot;готово&quot; в заявках приводит к подтверждению и архивации заявки&#10;- на главной добавлены индикаторы количества выполняемых и новых заявок&#10;- реализован механизм подтверждения новых заявок" />
+    <MESSAGE value="- устранены мелкие баги" />
+    <MESSAGE value="- добавлены новые видео" />
+    <option name="LAST_COMMIT_MESSAGE" value="- добавлены новые видео" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -515,11 +699,6 @@
           <url>file://$USER_HOME$/cartridges/Lib/site-packages/django/db/backends/sqlite3/base.py</url>
           <line>336</line>
           <option name="timeStamp" value="68" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/contacts/views.py</url>
-          <line>8</line>
-          <option name="timeStamp" value="290" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/polls/static/js/jgallery.js</url>
@@ -535,15 +714,16 @@
         </breakpoint>
       </default-breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="Python.DjangoServer">
-        <watch expression="True" />
-      </configuration>
-    </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Tickets$Asker1.coverage" NAME="Asker1 Coverage Results" MODIFIED="1575446261557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test_service" />
+    <SUITE FILE_PATH="coverage/Tickets$pyzip.coverage" NAME="pyzip Coverage Results" MODIFIED="1599976805197" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="E:/" />
+    <SUITE FILE_PATH="coverage/Tickets$UnDuplex.coverage" NAME="UnDuplex Coverage Results" MODIFIED="1576049204153" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../AntiDuplex" />
+    <SUITE FILE_PATH="coverage/Tickets$views.coverage" NAME="views Coverage Results" MODIFIED="1583133549516" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/macmap" />
+    <SUITE FILE_PATH="coverage/Tickets$tost.coverage" NAME="tost Coverage Results" MODIFIED="1583085637018" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/macmap" />
     <SUITE FILE_PATH="coverage/Tickets$test_service__1_.coverage" NAME="test_service (1) Coverage Results" MODIFIED="1574404233116" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test_service" />
+    <SUITE FILE_PATH="coverage/Tickets$chmc.coverage" NAME="chmc Coverage Results" MODIFIED="1595420615981" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/" />
+    <SUITE FILE_PATH="coverage/Tickets$rename.coverage" NAME="rename Coverage Results" MODIFIED="1599976611667" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="E:/" />
     <SUITE FILE_PATH="coverage/Tickets$test_service.coverage" NAME="test_service Coverage Results" MODIFIED="1574347653505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." />
     <SUITE FILE_PATH="coverage/Tickets$test.coverage" NAME="test Coverage Results" MODIFIED="1575883858401" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Desktop" />
   </component>

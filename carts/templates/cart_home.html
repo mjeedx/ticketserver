@@ -59,6 +59,7 @@
                 <th class="coll-1">Номер</th>
                 <th>Статус</th>
                 <th class="coll-1">Extra</th>
+                <th>Swap</th>
                 <th>Модель</th>
                 <th>Место</th>
             </tr>
@@ -78,6 +79,15 @@
                     {% else%}
                         <td>blank</td>
                     {% endif %}
+                    <td>
+                        <form action="{% url 'cart:get_swap'  %}?'car'={{ cart.num.id }}" method="post">
+                            {% csrf_token %}
+                            {{ swap_form.non_field_errors }}
+                            {{ swap_form.nums }}
+                            {{ kwargs.username }}
+                            <input class="subm" type="submit" value="Swap">
+                        </form>
+                    </td>
                     <td><a href="{% url 'cart:watch_model' model_id=cart.num.modell_id %}">{{ cart.num.modell }}</a></td>
                     <td><a href="{% url 'cart:watch_place' place_id=cart.place_id %}">{{ cart.place }}</a></td>
                 </tr>

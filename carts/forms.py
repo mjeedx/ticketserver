@@ -16,3 +16,8 @@ class Events_form(ModelForm):
 
 class Group_ops_form(forms.Form):
     nums = forms.CharField(label="nums", max_length=150)
+    # cart_id = forms.CharField(label="cart_id", max_length=5)
+
+
+class Swap_carts(forms.Form):
+    nums = forms.CharField(label="nums", max_length=50)

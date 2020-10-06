@@ -18,4 +18,6 @@ urlpatterns = [
     url(r'^test/$', TemplateView.as_view(template_name="test.html")),
     url(r'^cart_home/group_ops/$', views.group_ops, name='group_ops'),
     url(r'^cart_home/get_group_ops/$', views.get_group_ops, name='get_group_ops'),
+    url(r'^cart_home/get_swap/$', views.get_swap, name='get_swap'),
+    # url(r'^cart_home/get_swap/(?P<num>[0-9]+)/$', views.get_swap, name='get_swap'),
 ]

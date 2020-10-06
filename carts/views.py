@@ -5,7 +5,7 @@ from django.http import Http404
 from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.template.context_processors import csrf
-from carts.forms import Events_form, Group_ops_form
+from carts.forms import Events_form, Group_ops_form, Swap_carts
 from carts.models import Events, Cartridge, Num
 
 '''
@@ -23,10 +23,11 @@ gone_away = 3
 # Главная. Форма ввода и вывод последних событий
 @login_required
 def home(request):
-    form = Events_form
+    # form = Events_form
     args = {}
     args.update(csrf(request))
-    args['form'] = form
+    args['form'] = Events_form
+    args['swap_form'] = Swap_carts
     args['Cartridge'] = Cartridge.objects.all().order_by('-last_datetime')
     args['username'] = auth.get_user(request).username
     args['url_name'] = request.resolver_match.url_name  # Передает css классу "active" имя текущей вкладки
@@ -155,4 +156,16 @@ def get_group_ops(request):
                     event.save()  # Сохранение записи в евенты
                 except ObjectDoesNotExist:
                     pass
+    return HttpResponseRedirect('/carts/cart_home/')
+
+
+def get_swap(request, **kwargs):
+    if request.method == 'POST':
+        form = Swap_carts(request.POST)
+        if form.is_valid():
+            a = form.cleaned_data
+            # print(request.POST[Cartridge.num.id=""])
+            print(a['nums'])
+            b = request.GET.get('')
+            print(b)
     return HttpResponseRedirect('/carts/cart_home/')

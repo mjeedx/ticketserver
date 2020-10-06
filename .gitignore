@@ -3,4 +3,5 @@
 *.pyc
 *.jpeg
 .idea/
-settings.py
+my.cnf
+secret.txt

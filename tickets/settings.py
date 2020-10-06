@@ -22,11 +22,26 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'cjlmy8jpw$!w46r+s&*79dbi)$!#lc*vi2q7pn^jbxp*-de)^7'
 
+SECRET_FILE = os.path.join(BASE_DIR, 'secret.txt')
+try:
+    SECRET_KEY = open(SECRET_FILE).read().strip()
+except IOError:
+    try:
+        import random
+        SECRET_KEY = ''.join([random.SystemRandom().choice('abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)') for i in range(50)])
+        secret = open(SECRET_FILE, 'w')
+        secret.write(SECRET_KEY)
+        secret.close()
+    except IOError:
+        Exception('Please create a %s file with random characters \
+        to generate your secret key!' % SECRET_FILE)
+
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 THUMBNAIL_DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.1.235', '192.168.1.118', '192.168.1.111', "ithelp.anserglob.ua", "help.anserglob.ua"]
+ALLOWED_HOSTS = ['192.168.1.235', '192.168.1.118', '192.168.1.111', "help.anserglob.ua"]
 
 
 # Application definition
@@ -45,6 +60,7 @@ INSTALLED_APPS = [
     'sorl.thumbnail',
     'contacts',
     'main',
+    'macmap',
 ]
 
 MIDDLEWARE = [

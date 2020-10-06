@@ -20,8 +20,8 @@ class Category(models.Model):
 
 class Img(models.Model):
     title = models.CharField(max_length=100)
-    userId = models.ForeignKey(User)
-    categoryId = models.ForeignKey(Category)
+    userId = models.ForeignKey(User, on_delete=models.PROTECT)
+    categoryId = models.ForeignKey(Category, on_delete=models.PROTECT)
     photo = models.ImageField(upload_to='photos/%Y/%m/%d')
     ip = models.CharField(max_length=30, null=True, blank=True)
     like = models.IntegerField(default=0)
@@ -34,8 +34,8 @@ class Img(models.Model):
 
 
 class Likes(models.Model):
-    userId = models.ForeignKey(User, blank=True, null=True)
-    imgId = models.ForeignKey(Img, blank=True, null=True)
+    userId = models.ForeignKey(User, blank=True, null=True, on_delete=models.PROTECT)
+    imgId = models.ForeignKey(Img, blank=True, null=True, on_delete=models.PROTECT)
 
     def __str__(self):
         return str(self.userId)
