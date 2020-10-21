@@ -7,8 +7,8 @@ class Users(User):
     dept = models.CharField(max_length=35, blank=True)
     ip = models.GenericIPAddressField(null=True, blank=True)
 
-    def __str__(self):
-        return str(self.name)
+    # def __str__(self):
+    #     return str(self.name)
 
 
 class Category(models.Model):
