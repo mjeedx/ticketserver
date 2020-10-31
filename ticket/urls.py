@@ -17,4 +17,3 @@ urlpatterns = [
     url(r'^finish/(?P<ticket_id>[0-9]+)/$', views.finish, name='finish'),
     url(r'^confirm/(?P<ticket_id>[0-9]+)/$', views.confirm, name='confirm'),
 ]
-

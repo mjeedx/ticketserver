@@ -25,9 +25,6 @@
             <li class="send_ticket{% if url_name == 'home' %}active{% endif %}">
                 <a href="{% url 'ticket:home' %}">Отправить заявку</a>
             </li>
-            <li class="photo{% if url_name == 'tothegallery' %}active{% endif %}">
-                <a href="{% url 'polls:tothegallery' %}"> </a>
-            </li>
             {% if username == 'mjee' %}
                 <li class="{% if url_name == 'watch_all' %}active{% endif %}">
                     <a href="{% url 'ticket:watch_all' %}">Смотреть все</a>

@@ -2,14 +2,15 @@ from django.contrib.auth.decorators import login_required
 from django.core.exceptions import ObjectDoesNotExist
 from django.http import Http404
 from django.http import HttpResponseRedirect
-from django.shortcuts import render_to_response
+from django.shortcuts import render_to_response, render
 from django.template.context_processors import csrf
 from django.utils import timezone
 from django.http import JsonResponse
-from ticket.forms import Ticket_Form
+from ticket.forms import Ticket_Form, Rocket_user
 from ticket.models import Tickets
 from django.contrib import auth
 from requests import get
+from ticket.Test_bot import rocket_confirm
 
 send_message = "https://api.telegram.org/bot495013188:AAEXwQcQFFifEpkstwzOafUK7EIDohr-wUI/sendMessage?chat_id=-300176051&text="
 
@@ -60,7 +61,9 @@ def send_ticket(request):
 def watch_all(request):
     args = {'tickets': Tickets.objects.filter(deleted=False).order_by('-when'),
             'username': auth.get_user(request).username,
-            'url_name': request.resolver_match.url_name}
+            'url_name': request.resolver_match.url_name,
+            'form': Rocket_user}
+    args.update(request)
     return render_to_response('watch_all.html', args)
 
 
@@ -75,11 +78,13 @@ def history(request):
 # Смотреть одну заявку
 @login_required
 def watch_one(request, ticket_id):
-    args = {'ticket': Tickets.objects.get(id=ticket_id)}
+    args = {'ticket': Tickets.objects.get(id=ticket_id),
+            }
+    args.update(csrf(request))
     return render_to_response('watch_one.html', args)
 
 
-# Экшн принятия заявки
+# Экшн принятия заявки в работу
 def confirm(request, ticket_id):
     try:
         selected_ticket = Tickets.objects.get(id=ticket_id)
@@ -107,6 +112,10 @@ def finish(request, ticket_id):
         selected_ticket.save()
     except ObjectDoesNotExist:
         raise Http404
+    if request.method == "POST":
+        name = request.POST.get("rocket_user")
+        text = selected_ticket.subject
+        rocket_confirm(ticket_id, text, name)
     return HttpResponseRedirect('/tickets/all/')
 
 

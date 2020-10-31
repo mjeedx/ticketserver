@@ -24,7 +24,6 @@ urlpatterns = [
     url(r'^contacts/', include('contacts.urls')),
     url(r'^carts/', include('carts.urls')),
     url(r'^tickets/', include('ticket.urls')),
-    url(r'^polls/', include('polls.urls')),
     url(r'^video/', views.you_tube, name='you_tube'),
     url(r'^macmap/', include('macmap.urls')),
     url(r'^', views.main),

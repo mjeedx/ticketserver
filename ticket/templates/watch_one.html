@@ -20,10 +20,21 @@
     <p class="ip">Адресс:{{ ticket.ip }}</p>
     <p class="subject"><strong>{{ ticket.subject }}</strong></p>
 </div>
+<div class="info">
+    <form action="{% url 'ticket:finish' ticket_id=ticket.id %}" method="post">
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+        <div class="input-lg">
+            <input type="text" name="rocket_user" placeholder="Имя и Фамилия в чате">
+            {{ form.rocket_user.errors }}
+            {{ form.rocket_user }}
+            <input class="good button_ok" type="submit" value="Готово!">
+        </div>
+    </form>
+</div>
 
 <div class="button_ok">
     <a href="{% url 'ticket:finish' ticket_id=ticket.id %}" type="button" class="good">Готово!</a>
-
     <a href="{% url 'ticket:delete_row' ticket_id=ticket.id %}" type="button" class="delete">Архивировать.</a>
 </div>
 

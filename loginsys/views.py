@@ -33,7 +33,7 @@ def register(request):
             newuser = auth.authenticate(username=newUserForm.cleaned_data['username'],
                                         password=newUserForm.cleaned_data['password2'])
             auth.login(request, newuser)
-            return redirect('/polls/')
+            return redirect('/home/')
         else:
             args['form'] = newUserForm
     return render_to_response('register.html', args)
