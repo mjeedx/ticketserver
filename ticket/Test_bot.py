@@ -9,7 +9,7 @@ users_list = rocket.users_list().json()
 
 
 def rocket_confirm(id,text,name):
-    textMessage = "Ваша заявка #{}:\n \"{}\" - выполнена. Спасибки".format(id, text)
+    textMessage = "Ваша заявка №{}:\n \"{}\" - выполнена. \nСпасибо за обращение!".format(id, text)
     copy = "Копия от {} ".format(name)
     for i in users_list["users"]:
         if name in i["name"]:
