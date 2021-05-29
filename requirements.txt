@@ -10,3 +10,5 @@ requests==2.19.1
 setproctitle==1.1.10
 sorl-thumbnail==12.3
 urllib3==1.23
+rocketchat_API
+pysnmp
