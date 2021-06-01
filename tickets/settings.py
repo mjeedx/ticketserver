@@ -41,7 +41,7 @@ except IOError:
 DEBUG = True
 THUMBNAIL_DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.1.235', '192.168.1.118', '192.168.1.111', "help.anserglob.ua"]
+ALLOWED_HOSTS = ['192.168.1.235', '192.168.1.118', '192.168.1.111', "help.anserglob.ua", "*"]
 
 
 # Application definition
