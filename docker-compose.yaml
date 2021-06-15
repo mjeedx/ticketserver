@@ -10,9 +10,12 @@ services:
         ports:
           - "80:80"
           - "8000:8000"
+        env_file: .env
         environment:
-          DB_USER: "dbuser"
-          DB_PASSWD: "!$Eey0uMan"
+#          DB_HOST: ticketserverdb.cjux829ezany.eu-central-1.rds.amazonaws.com
+          -  DB_NAME=ticketserver
+#          DB_USER: dbuser
+#          DB_PASSWD: "!$Eey0uMan"
 
 #    nginx:
 #        build: ./nginx

@@ -13,6 +13,8 @@ WORKDIR /srv/ticketserver/
 #RUN cp nginx/default.conf /etc/nginx/conf.d/default.conf && service nginx restart && \
 RUN pip3 install -r requirements.txt && python3 manage.py collectstatic --noinput
 
+RUN echo test
+
 RUN python3 manage.py makemigrations && python3 manage.py migrate
 
 CMD ["python3", "manage.py", "runserver", "0.0.0.0:80"]

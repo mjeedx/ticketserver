@@ -9,8 +9,8 @@ https://docs.djangoproject.com/en/1.10/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.10/ref/settings/
 """
-import sorl
 import os
+import environ
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -99,18 +99,34 @@ WSGI_APPLICATION = 'tickets.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
+dbname = os.environ.get("DB_NAME")
+print(type(dbname))
+
 DATABASES = {
 #    'default': {
 #        'ENGINE': 'django.db.backends.sqlite3',
 #        'NAME': '/srv/ticketserver/db/db.sqlite3',
 #        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #    }
+#   'default': {
+#       'ENGINE': 'django.db.backends.mysql',
+#       'HOST': os.environ.get("DB_HOST"),
+#       'USER': os.environ.get("DB_USER"),
+#       'PASSWORD': os.environ.get("DB_PASSWD"),
+#       'NAME': os.environ.get("DB_NAME"),
+#       'default-character-set': "utf8",
+#   }
+
    'default': {
        'ENGINE': 'django.db.backends.mysql',
-       'OPTIONS': {
-           'read_default_file':  os.path.join(BASE_DIR, 'my.cnf'),
-       }
+       'HOST': 'ticketserverdb.cjux829ezany.eu-central-1.rds.amazonaws.com',
+       'USER': 'dbuser',
+       'PASSWORD': '!$Eey0uMan',
+       'NAME': 'ticketserver',
+       'default-character-set': "utf8",
    }
+
+
 }
 
 
