@@ -41,7 +41,7 @@ except IOError:
 DEBUG = True
 THUMBNAIL_DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.1.235', '192.168.1.118', '192.168.1.111', "help.anserglob.ua", "*"]
+ALLOWED_HOSTS = ['192.168.1.235', '192.168.1.118', '192.168.1.111', '*']
 
 
 # Application definition
@@ -100,17 +100,17 @@ WSGI_APPLICATION = 'tickets.wsgi.application'
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-    
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.mysql',
-    #     'OPTIONS': {
-    #         'read_default_file':  os.path.join(BASE_DIR, 'my.cnf'),
-    #     }
-    # }
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': '/srv/ticketserver/db/db.sqlite3',
+#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#    }
+   'default': {
+       'ENGINE': 'django.db.backends.mysql',
+       'OPTIONS': {
+           'read_default_file':  os.path.join(BASE_DIR, 'my.cnf'),
+       }
+   }
 }
 
 
@@ -151,9 +151,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
-#STATIC_ROOT = '/var/www/help.anserglob.ua/static/'  #for Linux
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')  #for Windows
+STATIC_ROOT = '/var/www/ticketserver.ua/static/'  #for Linux
+#STATIC_ROOT = os.path.join(BASE_DIR, 'static')  #for Windows
 
-
-MEDIA_ROOT = os.path.join('/home/mjee/media')
 MEDIA_URL = '/media/'
+MEDIA_ROOT = '/var/www/ticketserver.ua/media'

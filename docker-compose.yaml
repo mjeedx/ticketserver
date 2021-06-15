@@ -3,16 +3,21 @@ version: '3'
 services:
     app:
         build: .
+#        image: mjeedx/ticketserver:latest
         volumes:
-          - /var/www/ticketserver.ua/static:/var/www/ticketserver.ua/static
-          - /var/www/ticketserver.ua/media:/var/www/ticketserver.ua/media
-        ports:
-          - "8080:8080"
-
-    nginx:
-        build: ./nginx
-        volumes:
-          - /var/www/ticketserver.ua/static:/var/www/ticketserver.ua/static
+          - /var/www/ticketserver.ua:/var/www/ticketserver.ua
+          - /srv/ticketserver/db:/srv/ticketserver/db
         ports:
           - "80:80"
+          - "8000:8000"
+        environment:
+          DB_USER: "dbuser"
+          DB_PASSWD: "!$Eey0uMan"
+
+#    nginx:
+#        build: ./nginx
+#        volumes:
+#          - /var/www/ticketserver.ua/static:/var/www/ticketserver.ua/static
+#        ports:
+#          - "80:80"
 

@@ -3,7 +3,7 @@
 NAME="tickets"                                    # Name of the application
 DJANGODIR=$PWD       # Django project directory
 echo $DJANGODIR
-#SOCKFILE=/srv/run/gunicorn.sock  # we will communicte using this unix socket
+#SOCKFILE=/srv/run/gunicorn.sock  # we will communicate using this unix socket
 IP=0.0.0.0:8000
 USER=www-data                                        # the user to run as
 GROUP=www-data                                 # the group to run as

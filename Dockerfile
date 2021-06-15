@@ -2,14 +2,17 @@ FROM ubuntu:18.04
 
 LABEL maintainer="mjee245@gmail.com"
 LABEL version="0.1"
-LABEL description="Docker image for tickets server"
+LABEL description="Docker image for ticketserver"
 ENV PYTHONUNBUFFERED 1
 
-RUN apt update && apt install -y python3 python3-pip mysql-client libmysqlclient-dev && mkdir /tmp/ticketserver
+RUN apt update && apt install -y python3 python3-pip mysql-client libmysqlclient-dev nginx && mkdir /srv/ticketserver
 
 COPY . /srv/ticketserver/
+WORKDIR /srv/ticketserver/
 
-RUN cd /srv/ticketserver/ && pip3 install -r requirements.txt
+#RUN cp nginx/default.conf /etc/nginx/conf.d/default.conf && service nginx restart && \
+RUN pip3 install -r requirements.txt && python3 manage.py collectstatic --noinput
 
-RUN python3 /srv/ticketserver/manage.py collectstatic --noinput && python3 /srv/ticketserver/manage.py makemigrations && python3 /srv/ticketserver/manage.py migrate
-CMD ["python3", "/srv/ticketserver/manage.py", "runserver", "0.0.0.0:8080"]
+RUN python3 manage.py makemigrations && python3 manage.py migrate
+
+CMD ["python3", "manage.py", "runserver", "0.0.0.0:80"]
