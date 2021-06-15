@@ -6,3 +6,4 @@
 my.cnf
 secret.txt
 settings.py
+db.sqlite3

@@ -129,11 +129,8 @@ def delete_row(request, ticket_id):
         raise Http404
     return HttpResponseRedirect('/tickets/all/')
 
-
+# Ендпоинт для заббикса, дающий количество неподтверждённых тикетов
 def test(request):
-    count = Tickets.objects.filter(finished=False)
-    if count.__len__() > 0:
-        return JsonResponse({"ok": "ok"})
-    else:
-        a = {'tickets': "clear"}
-        return JsonResponse(a)
+    count = Tickets.objects.filter(confirmed=False)
+    tickets_count = count.__len__()
+    return JsonResponse({"new_tickets": tickets_count})

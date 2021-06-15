@@ -9,7 +9,6 @@ https://docs.djangoproject.com/en/1.10/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.10/ref/settings/
 """
-import sorl
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -56,7 +55,6 @@ INSTALLED_APPS = [
     'ticket',
     'loginsys',
     'carts',
-    #'sorl.thumbnail',
     'contacts',
     'main',
     'macmap',
@@ -99,17 +97,17 @@ WSGI_APPLICATION = 'tickets.wsgi.application'
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-    
     # 'default': {
-    #     'ENGINE': 'django.db.backends.mysql',
-    #     'OPTIONS': {
-    #         'read_default_file':  os.path.join(BASE_DIR, 'my.cnf'),
-    #     }
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     # }
+    
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'OPTIONS': {
+            'read_default_file':  os.path.join(BASE_DIR, 'my.cnf'),
+        }
+    }
 }
 
 
