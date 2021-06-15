@@ -10,9 +10,8 @@ services:
         ports:
           - "80:80"
           - "8000:8000"
-        environment:
-          DB_USER: "dbuser"
-          DB_PASSWD: "!$Eey0uMan"
+        env_file: .env
+
 
 #    nginx:
 #        build: ./nginx
