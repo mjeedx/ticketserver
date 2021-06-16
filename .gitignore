@@ -3,7 +3,7 @@ docker-compose.yaml
 *.jpg
 *.pyc
 *.jpeg
-.idea/
+.idea
 my.cnf
 secret.txt
 .env
