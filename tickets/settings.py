@@ -121,8 +121,6 @@ DATABASES = {
        'NAME': 'ticketserver',
        'default-character-set': "utf8",
    }
-
-
 }
 
 
