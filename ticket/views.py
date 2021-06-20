@@ -71,19 +71,18 @@ def watch_all(request):
     return render_to_response('watch_all.html', args)
 
 
-# Показать смотреть их заявки
+# Показать пользователям их заявки
 def my_tickets(request):
     x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
     if x_forwarded_for:
         ip = x_forwarded_for.split(',')[0]
-        print("ip1=", ip)
     else:
         ip = request.META.get('REMOTE_ADDR')
-        print()
     args = {'tickets': Tickets.objects.filter(ip=ip).order_by('-when'),
             'username': auth.get_user(request).username,
             'url_name': request.resolver_match.url_name,
-            'form': Rocket_user}
+            'form': Rocket_user
+            }
     args.update(request)
     return render_to_response('my_tickets.html', args)
 
