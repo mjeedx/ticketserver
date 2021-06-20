@@ -3,7 +3,7 @@ chardet==3.0.4
 Django==2.2.12
 gunicorn==19.6.0
 idna==2.7
-mysqlclient==1.3.12
+mysqlclient
 olefile==0.44
 Pillow==4.1.1
 requests==2.19.1
