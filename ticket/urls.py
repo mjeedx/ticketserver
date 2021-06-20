@@ -11,6 +11,7 @@ urlpatterns = [
     url(r'^test/$', views.test, name='test'),
     url(r'^delete_row/(?P<ticket_id>[0-9]+)/$', views.delete_row, name='delete_row'),
     url(r'^all/$', views.watch_all, name='watch_all'),
+    url(r'^my_tickets/$', views.my_tickets, name='my_tickets'),
     url(r'^watch/(?P<ticket_id>[0-9]+)/$', views.watch_one, name='watch_one'),
     url(r'^history/$', views.history, name='history'),
     url(r'^ticket_add/$', views.send_ticket, name='ticket_add'),

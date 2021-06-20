@@ -37,6 +37,10 @@
                 <li>
                     <a href="{% url 'cart:cart_home' %}">Картриджи</a>
                 </li>
+            {% else %}
+                <li>
+                    <a href="{% url 'ticket:my_tickets' %}"> Мои заявки </a>
+                </li>
             {% endif %}
                 <li>
                     <a href="{% url 'you_tube' %}"> Видео </a>
@@ -77,8 +81,6 @@
 </div>
 
 </body>
-
-
 
     <div class="footer">
             <div class="tecket">

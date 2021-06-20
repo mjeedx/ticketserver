@@ -10,10 +10,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="{% static '/css/57134.png' %}">
-    <title>Support</title>
+    <title>IT Support</title>
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="{% static '/css/bootstrap.css' %}">
+{#    <link rel="stylesheet" href="{% static '/css/bootstrap.css' %}">#}
     <link rel="stylesheet" href="{% static '/css/ticket.css' %}">
 
 </head>
@@ -24,6 +24,7 @@
         <p class="s1">Спасибо за обращение!</p>
         <p class="s2">Мы будем уведомлены о проблеме в кратчайшие сроки!</p>
         <a class="s3" href="/" type="button" class="btn btn-primary">На главную</a>
+        <p class="s2">Отслеживать статус выполнения заявки Вы можете по <a href="{% url 'ticket:my_tickets' %}">ссылке</a></p>
     </div>
 
 {% endblock %}

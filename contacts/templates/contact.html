@@ -28,7 +28,7 @@
 		<td>Отдел</td>
 		<td>Телефон</td>
 		<td>Почта</td>
-        <td class="col-1">Руководитель</td>
+{#        <td class="col-1">Руководитель</td>#}
 	</tr>	
 
 
@@ -41,11 +41,11 @@
           <td>{{ contact.department_id }}</td>
           <td>{{ contact.tel_id|tel_mod }}</td>
           <td class="col-1"><a href="mailto:{{ contact.mail_id }}">{{ contact.mail_id }}</a> </td>
-          {% if contact.is_chief == True %}
-              <td>Да</td>
-          {% else %}
-              <td>Нет</td>
-          {% endif %}
+{#          {% if contact.is_chief == True %}#}
+{#              <td>Да</td>#}
+{#          {% else %}#}
+{#              <td>Нет</td>#}
+{#          {% endif %}#}
 
       </tr>
       

@@ -36,8 +36,10 @@ def send_ticket(request):
 
                 if x_forwarded_for:
                     ip = x_forwarded_for.split(',')[0]
+                    print("ip1=", ip)
                 else:
                     ip = request.META.get('REMOTE_ADDR')
+                    print()
                 ticket = form.save(commit=False)
                 ticket.ip = ip
                 ticket.when = timezone.now()
@@ -46,8 +48,10 @@ def send_ticket(request):
                 message = request.POST.get("who") + " " + \
                           request.POST.get("where") + " " + \
                           request.POST.get("subject")
-                get(send_message + message)  # Отправить текст сообщения в телеграмм
-
+                try:
+                    get(send_message + message)  # Отправить текст сообщения в телеграмм
+                except:
+                    pass
 
     except ObjectDoesNotExist:
         raise Http404
@@ -65,6 +69,23 @@ def watch_all(request):
             'form': Rocket_user}
     args.update(request)
     return render_to_response('watch_all.html', args)
+
+
+# Показать смотреть их заявки
+def my_tickets(request):
+    x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+    if x_forwarded_for:
+        ip = x_forwarded_for.split(',')[0]
+        print("ip1=", ip)
+    else:
+        ip = request.META.get('REMOTE_ADDR')
+        print()
+    args = {'tickets': Tickets.objects.filter(ip=ip).order_by('-when'),
+            'username': auth.get_user(request).username,
+            'url_name': request.resolver_match.url_name,
+            'form': Rocket_user}
+    args.update(request)
+    return render_to_response('my_tickets.html', args)
 
 
 @login_required
@@ -90,7 +111,7 @@ def confirm(request, ticket_id):
         selected_ticket = Tickets.objects.get(id=ticket_id)
         if not selected_ticket.confirmed:
             selected_ticket.confirmed = True
-            selected_ticket.date_end = timezone.now()
+            selected_ticket.date_confirm = timezone.now()
         elif selected_ticket.confirmed:
             selected_ticket.confirmed = False
         selected_ticket.save()
@@ -131,9 +152,6 @@ def delete_row(request, ticket_id):
 
 
 def test(request):
-    count = Tickets.objects.filter(finished=False)
-    if count.__len__() > 0:
-        return JsonResponse({"ok": "ok"})
-    else:
-        a = {'tickets': "clear"}
-        return JsonResponse(a)
+    count = Tickets.objects.filter(confirmed=False)
+    return JsonResponse({"tickets_count": count.__len__()})
+

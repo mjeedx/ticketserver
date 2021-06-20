@@ -1,0 +1,53 @@
+{% block my_tickets %}
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>active</title>
+    <link rel="stylesheet" href="{% static '/css/watch_all.css' %}">
+  </head>
+   
+<div class=back_but>
+    <a href="/"><input class="back" type="submit" value="Вернуться в главное меню"/></a>
+</div>
+<div class="container-fluid">
+  <table class="table">
+    <thead class="table_head">
+      <tr>
+        <th class="col-1">ID заявки</th>
+        <th class="col-1">Отправитель</th>
+        <th class="col-1">Отдел</th>
+        <th class="col-1">Дата поступления</th>
+        <th class="col-1">Дата завершения</th>
+        <th class="col-2">Subject</th>
+        <th class="col-1">Статус</th>
+      </tr>
+    </thead>
+    <tbody class="table_body">
+    {% for ticket in tickets %}
+      {% if ticket.finished is True %}
+      <tr class="success">
+      {% else %}
+      <tr class="danger">
+      {% endif %}
+        <td class="col-1">{{ ticket.id }}</td>
+        <td class="col-1">{{ ticket.who }}</td>
+        <td class="col-1">{{ ticket.where }}</td>
+        <td class="col-1">{{ ticket.when }}</td>
+        <td class="col-1">{{ ticket.date_end }}</td>
+        <td class="col-2"><a href="{% url 'ticket:watch_one' ticket_id=ticket.id %}">{{ ticket.subject }}</a></td>
+        {% if ticket.finished is True %}
+            <td class="col-1">Готово</td>
+        {% elif ticket.confirmed is True %}
+            <td class="col-1">В работе</td>
+        {% elif ticket.confirmed is False %}
+            <td class="col-1">Не принята</td>
+        {% endif %}
+       </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}
