@@ -128,9 +128,11 @@ def finish(request, ticket_id):
             selected_ticket.deleted = True
             selected_ticket.confirmed = True
             selected_ticket.date_end = timezone.now()
+            print(1)
         elif selected_ticket.finished:
             selected_ticket.confirmed = True
             selected_ticket.finished = False
+            print(2)
         selected_ticket.save()
     except ObjectDoesNotExist:
         raise Http404
@@ -145,6 +147,7 @@ def finish(request, ticket_id):
 def delete_row(request, ticket_id):
     try:
         selected_ticket = Tickets.objects.get(id=ticket_id)
+        selected_ticket.finished = True
         selected_ticket.deleted = True
         selected_ticket.confirmed = True
         selected_ticket.save()
