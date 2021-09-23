@@ -12,7 +12,7 @@ from django.contrib import auth
 from requests import get
 from ticket.Test_bot import rocket_confirm
 
-send_message = "https://api.telegram.org/bot495013188:AAEXwQcQFFifEpkstwzOafUK7EIDohr-wUI/sendMessage?chat_id=-300176051&text="
+send_message = "https://api.telegram.org/bot2038916948:AAHi4gfEQcZkS8Ql84x_DzoIFt2lXBx0ZzQ/sendMessage?chat_id=-1001589165256&text="
 
 
 # Показ домашней странички с формой ввода тикета
@@ -49,6 +49,7 @@ def send_ticket(request):
                           request.POST.get("where") + " " + \
                           request.POST.get("subject")
                 try:
+                    print(send_message + message)
                     get(send_message + message)  # Отправить текст сообщения в телеграмм
                 except:
                     pass
